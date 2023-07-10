@@ -23,6 +23,8 @@ public class TurretPanel : MonoBehaviour
     int powerLevel;
     bool ready = false;
 
+    public GameObject turret;
+
     void Start()
     {
         UpdateButtonColor();
@@ -73,7 +75,7 @@ public class TurretPanel : MonoBehaviour
     {
         if (ready)
         {
-            Debug.Log("deactivate");
+            turret.GetComponent<GunTurret>().DeactivateTurret();
         }
     }
 
