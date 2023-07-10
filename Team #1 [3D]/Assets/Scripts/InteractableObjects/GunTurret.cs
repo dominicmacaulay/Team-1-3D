@@ -9,11 +9,13 @@ public class GunTurret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim.SetBool("isShooting", true);
+        //anim.SetBool("isShooting", true);
+        Debug.Log("shooting");
     }
 
     public void DeactivateTurret()
     {
-        anim.SetBool("isShooting", false);
+        //anim.SetBool("isShooting", false);
+        Debug.Log("not shooting");
     }
 }

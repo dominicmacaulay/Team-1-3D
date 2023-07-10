@@ -9,7 +9,8 @@ public class InsertBattery : MonoBehaviour
 
     public void BatteryAnimation()
     {
-        anim.SetTrigger("battery");
+        //anim.SetTrigger("battery");
         isActivated = true;
+        Debug.Log("battery inserted");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyPad : MonoBehaviour
 {
-    bool hasKeyCard; // temporary bool which will be accessed from the player scripts
+    public bool hasKeyCard; // temporary bool which will be accessed from the player scripts
     public GameObject batteryPanel;
     public Animator anim;
     public AudioSource audio;
@@ -12,7 +12,7 @@ public class KeyPad : MonoBehaviour
     public AudioClip correctSFX;
     public GameObject labDoor;
 
-    void Interaction()
+    public void Interaction()
     {
         if (batteryPanel.GetComponent<InsertBattery>().isActivated)
         {
@@ -29,14 +29,16 @@ public class KeyPad : MonoBehaviour
 
     void SwipeKeyCard()
     {
-        audio.PlayOneShot(correctSFX);
-        anim.SetTrigger("correct");
+        Debug.Log("swiped");
+        //audio.PlayOneShot(correctSFX);
+        //anim.SetTrigger("correct");
         labDoor.GetComponent<LabEntranceDoor>().OpenDoor();
     }
 
     void KeyCardRequired()
     {
-        audio.PlayOneShot(incorrectSFX);
-        anim.SetTrigger("incorrect");
+        Debug.Log("required");
+        //audio.PlayOneShot(incorrectSFX);
+        //anim.SetTrigger("incorrect");
     }
 }

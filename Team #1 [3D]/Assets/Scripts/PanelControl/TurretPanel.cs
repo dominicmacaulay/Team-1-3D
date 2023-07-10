@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Diagnostics.Tracing;
+using SUPERCharacter;
 
 public class TurretPanel : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class TurretPanel : MonoBehaviour
     bool ready = false;
 
     public GameObject turret;
+
+    public SUPERCharacterAIO characterController;
 
     void Start()
     {
@@ -77,6 +80,12 @@ public class TurretPanel : MonoBehaviour
         {
             turret.GetComponent<GunTurret>().DeactivateTurret();
         }
+    }
+
+    public void OnClickExitButton()
+    {
+        gameObject.SetActive(false);
+        characterController.UnpausePlayer();
     }
 
     void UpdateButtonColor()
