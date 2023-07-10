@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14190279, g: 0.2830189, b: 0.1294945, a: 1}
+  m_Color: {r: 0.17902279, g: 0.23727117, b: 0.254717, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1748,6 +1748,7 @@ GameObject:
   - component: {fileID: 1049774084377986785}
   - component: {fileID: 8618076513177503874}
   - component: {fileID: 7448108307413361000}
+  - component: {fileID: 4480839102635537235}
   m_Layer: 5
   m_Name: TurretPanel
   m_TagString: Untagged
@@ -1831,6 +1832,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameSpace: {fileID: 5977941776508657175}
   dial: {fileID: 9008399639680365397}
+--- !u!114 &4480839102635537235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542279377396241746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38acad3af31d5034d9ba5e52c9d07b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 440788660917515391}
 --- !u!1 &5837679111914390394
 GameObject:
   m_ObjectHideFlags: 0

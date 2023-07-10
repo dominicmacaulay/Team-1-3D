@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using System.Diagnostics.Tracing;
 
 public class TurretPanel : MonoBehaviour
@@ -21,6 +21,12 @@ public class TurretPanel : MonoBehaviour
     int lockNumber = 0;
     public GameObject dial;
     int powerLevel;
+    bool ready = false;
+
+    void Start()
+    {
+        UpdateButtonColor();
+    }
 
     void Update()
     {
@@ -35,6 +41,7 @@ public class TurretPanel : MonoBehaviour
         {
             index -= 1;
         }
+        UpdateButtonColor();
     }
 
     public void OnClickRightNameButton()
@@ -43,6 +50,7 @@ public class TurretPanel : MonoBehaviour
         {
             index += 1;
         }
+        UpdateButtonColor();
     }
 
     public void OnClickDialButton()
@@ -52,19 +60,33 @@ public class TurretPanel : MonoBehaviour
         {
             lockNumber = 0;
         }
+        UpdateButtonColor();
     }
 
     public void SliderValue(float value)
     {
         powerLevel = (int)value;
+        UpdateButtonColor();
     }
 
     public void OnClickDeactivateButton()
     {
+        if (ready)
+        {
+            Debug.Log("deactivate");
+        }
+    }
+
+    void UpdateButtonColor()
+    {
         if (index == 2 && lockNumber == -252 && powerLevel == 3)
         {
-            //deactivate turret
-            Debug.Log("deactivate");
+            GetComponent<ButtonColorChange>().ChangeButtonColor(Color.green);
+            ready = true;
+        }
+        else
+        {
+            GetComponent<ButtonColorChange>().ChangeButtonColor(Color.red);
         }
     }
 }
