@@ -1534,8 +1534,11 @@ public class SUPERCharacterAIO : MonoBehaviour{
     #endif
     #endregion
     
-    public void PausePlayer(PauseModes pauseMode){
+    public void PausePlayer(){
+        PauseModes pauseMode = PauseModes.FreezeInPlace;
         controllerPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         switch(pauseMode){
             case PauseModes.MakeKinematic:{
                 p_Rigidbody.isKinematic = true;
@@ -1564,6 +1567,8 @@ public class SUPERCharacterAIO : MonoBehaviour{
     public void UnpausePlayer(float delay = 0){
         if(delay==0){
             controllerPaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             p_Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             p_Rigidbody.isKinematic = false;
         }
