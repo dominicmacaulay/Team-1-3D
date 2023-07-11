@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeyPad : MonoBehaviour
 {
-    public bool hasKeyCard; // temporary bool which will be accessed from the player scripts
+    public PickupManager pickupScript;
     public GameObject batteryPanel;
     public Animator anim;
     public AudioSource audio;
@@ -16,7 +16,7 @@ public class KeyPad : MonoBehaviour
     {
         if (batteryPanel.GetComponent<InsertBattery>().isActivated)
         {
-            if (hasKeyCard) //replace with player component
+            if (pickupScript.hasKeyCard) //replace with player component
             {
                 SwipeKeyCard();
             }
@@ -29,6 +29,7 @@ public class KeyPad : MonoBehaviour
 
     void SwipeKeyCard()
     {
+        pickupScript.PlaceKeyCard();
         Debug.Log("swiped");
         //audio.PlayOneShot(correctSFX);
         //anim.SetTrigger("correct");

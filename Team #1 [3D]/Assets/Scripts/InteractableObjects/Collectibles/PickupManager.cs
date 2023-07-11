@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class PickupManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public HUDPickups hudScript;
+
+    public bool hasBattery;
+    public bool hasKeyCard;
+
+    public void PickupBattery()
     {
-        
+        hasBattery = true;
+        hudScript.Display01(hasBattery);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaceBattery()
     {
-        
+        hasBattery = false;
+        hudScript.Display01(hasBattery);
+    }
+
+    public void PickupKeyCard()
+    {
+        hasKeyCard = true;
+        hudScript.Display02(hasKeyCard);
+    }
+
+    public void PlaceKeyCard()
+    {
+        hasKeyCard = false;
+        hudScript.Display02(hasKeyCard);
     }
 }
