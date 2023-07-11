@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretPanelObject : MonoBehaviour
 {
     public GameObject turretPanel;
+    public GameObject HUD;
 
     // Start is called before the first frame update
     void Start()
@@ -15,5 +16,6 @@ public class TurretPanelObject : MonoBehaviour
     public void AccessTurretPanel()
     {
         turretPanel.SetActive(true);
+        HUD.SetActive(false);
     }
 }

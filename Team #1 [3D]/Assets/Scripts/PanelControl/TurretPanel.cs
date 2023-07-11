@@ -25,6 +25,7 @@ public class TurretPanel : MonoBehaviour
     bool ready = false;
 
     public GameObject turret;
+    public GameObject HUD;
 
     public SUPERCharacterAIO characterController;
 
@@ -68,9 +69,9 @@ public class TurretPanel : MonoBehaviour
         UpdateButtonColor();
     }
 
-    public void SliderValue(float value)
+    public void SliderValue(Slider slider)
     {
-        powerLevel = (int)value;
+        powerLevel = (int)slider.value;
         UpdateButtonColor();
     }
 
@@ -86,6 +87,7 @@ public class TurretPanel : MonoBehaviour
     {
         gameObject.SetActive(false);
         characterController.UnpausePlayer();
+        HUD.SetActive(true);
     }
 
     void UpdateButtonColor()
