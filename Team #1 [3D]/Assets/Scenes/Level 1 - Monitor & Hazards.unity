@@ -6230,7 +6230,7 @@ GameObject:
   - component: {fileID: 228207621}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6250,11 +6250,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 751246382}
 --- !u!33 &228207622
@@ -9045,7 +9045,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29610
+  m_Name: pb_Mesh29622
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -10181,7 +10181,7 @@ GameObject:
   - component: {fileID: 347760050}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10216,11 +10216,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1188601203}
 --- !u!33 &347760051
@@ -12313,7 +12313,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28438
+  m_Name: pb_Mesh28448
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14049,7 +14049,7 @@ GameObject:
   - component: {fileID: 517708817}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14084,11 +14084,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 458152918}
 --- !u!33 &517708818
@@ -14789,7 +14789,7 @@ GameObject:
   - component: {fileID: 527457303}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14809,11 +14809,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1248747361}
 --- !u!33 &527457304
@@ -23570,7 +23570,7 @@ GameObject:
   - component: {fileID: 731875309}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23590,11 +23590,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 779318694}
 --- !u!33 &731875310
@@ -24459,7 +24459,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29002
+  m_Name: pb_Mesh29012
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -25141,7 +25141,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28214
+  m_Name: pb_Mesh28218
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -26080,7 +26080,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28678
+  m_Name: pb_Mesh28692
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -28808,7 +28808,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29416
+  m_Name: pb_Mesh29424
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -33436,7 +33436,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29210
+  m_Name: pb_Mesh29222
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -34619,7 +34619,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28312
+  m_Name: pb_Mesh28318
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -36209,7 +36209,7 @@ GameObject:
   - component: {fileID: 1247726113}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36244,11 +36244,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 733457358}
 --- !u!33 &1247726114
@@ -36933,7 +36933,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28454
+  m_Name: pb_Mesh28464
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -40021,7 +40021,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29628
+  m_Name: pb_Mesh29640
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -43724,7 +43724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1448282790
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47174,7 +47174,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29454
+  m_Name: pb_Mesh29462
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -48448,7 +48448,7 @@ GameObject:
   - component: {fileID: 1625645732}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48483,11 +48483,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1981439147}
 --- !u!33 &1625645733
@@ -50854,7 +50854,7 @@ GameObject:
   - component: {fileID: 1777948267}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50874,11 +50874,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 907210196}
 --- !u!33 &1777948268
@@ -52472,7 +52472,7 @@ GameObject:
   - component: {fileID: 1818741999}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52507,11 +52507,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1557615893}
 --- !u!33 &1818742000
@@ -56394,7 +56394,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29346
+  m_Name: pb_Mesh29354
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -58497,7 +58497,7 @@ GameObject:
   - component: {fileID: 2027686755}
   m_Layer: 0
   m_Name: AcidGreen
-  m_TagString: Untagged
+  m_TagString: acid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58517,11 +58517,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 307641023}
 --- !u!33 &2027686756
@@ -59203,7 +59203,7 @@ GameObject:
   - component: {fileID: 2066767550}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: lasers
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59223,11 +59223,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1323027000}
 --- !u!33 &2066767551
