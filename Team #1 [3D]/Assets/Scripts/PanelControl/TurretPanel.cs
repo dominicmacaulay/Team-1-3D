@@ -19,12 +19,13 @@ public class TurretPanel : MonoBehaviour
         "REDACTED.57",
         "ADMIRAL.72",
     };
-    int lockNumber = 0;
+    int lockNumber = -18;
     public GameObject dial;
     int powerLevel;
     bool ready = false;
 
     public GameObject turret;
+    public GameObject HUD;
 
     public SUPERCharacterAIO characterController;
 
@@ -61,16 +62,16 @@ public class TurretPanel : MonoBehaviour
     public void OnClickDialButton()
     {
         lockNumber -= 36;
-        if (lockNumber < -360)
+        if (lockNumber < -342)
         {
-            lockNumber = 0;
+            lockNumber = -18;
         }
         UpdateButtonColor();
     }
 
-    public void SliderValue(float value)
+    public void SliderValue(Slider slider)
     {
-        powerLevel = (int)value;
+        powerLevel = (int)slider.value;
         UpdateButtonColor();
     }
 
@@ -86,11 +87,12 @@ public class TurretPanel : MonoBehaviour
     {
         gameObject.SetActive(false);
         characterController.UnpausePlayer();
+        HUD.SetActive(true);
     }
 
     void UpdateButtonColor()
     {
-        if (index == 2 && lockNumber == -252 && powerLevel == 3)
+        if (index == 2 && lockNumber == -234 && powerLevel == 3)
         {
             GetComponent<ButtonColorChange>().ChangeButtonColor(Color.green);
             ready = true;

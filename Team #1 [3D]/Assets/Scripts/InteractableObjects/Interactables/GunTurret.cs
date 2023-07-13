@@ -6,16 +6,59 @@ public class GunTurret : MonoBehaviour
 {
     public Animator anim;
 
-    // Start is called before the first frame update
-    void Start()
+    public Transform idlePoint;
+    public Transform inactivePoint;
+    public Transform player;
+    public Transform turretHead;
+
+    public Collider turretPath;
+
+    bool isActive = true;
+    bool inRange = false;
+
+    void Update()
     {
-        //anim.SetBool("isShooting", true);
-        Debug.Log("shooting");
+        Look();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && isActive)
+        {
+            //anim.SetBool("isShooting", true);
+            inRange = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && isActive)
+        {
+            //anim.SetBool("isShooting", false);
+            inRange = false;
+        }
+    }
+
+    void Look()
+    {
+        if (isActive && inRange)
+        {
+            turretHead.LookAt(player);
+        }
+        else if (isActive)
+        {
+            turretHead.LookAt(idlePoint);
+        }
+        else if (isActive == false)
+        {
+            turretHead.LookAt(inactivePoint);
+        }
     }
 
     public void DeactivateTurret()
     {
-        //anim.SetBool("isShooting", false);
-        Debug.Log("not shooting");
+        isActive = false;
+        turretPath.enabled = false;
+        //anim.SetBool("isInactive", true);
     }
 }
