@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretPanel: {fileID: 647759885}
-  HUD: {fileID: 0}
+  HUD: {fileID: 1205104583}
 --- !u!114 &28369889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14610,7 +14610,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28068
+  m_Name: pb_Mesh28294
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -30668,10 +30668,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   idlePoint: {fileID: 0}
-  inactivePoint: {fileID: 0}
+  inactivePoint: {fileID: 1061654236}
   player: {fileID: 0}
   turretHead: {fileID: 0}
-  turretPath: {fileID: 0}
+  turretPath: {fileID: 929070665}
 --- !u!65 &929070665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49733,7 +49733,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29228
+  m_Name: pb_Mesh29468
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
