@@ -6,6 +6,7 @@ TagManager:
   tags:
   - acid
   - lasers
+  - turret
   layers:
   - Default
   - TransparentFX
