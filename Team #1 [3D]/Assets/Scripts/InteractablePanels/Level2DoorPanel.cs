@@ -5,6 +5,7 @@ using UnityEngine;
 public class Level2DoorPanel : MonoBehaviour
 {
     public GameObject panel;
+    public GameObject HUD;
 
     void Start()
     {
@@ -14,5 +15,6 @@ public class Level2DoorPanel : MonoBehaviour
     public void OpenPanel()
     {
         panel.SetActive(true);
+        HUD.SetActive(false);
     }
 }

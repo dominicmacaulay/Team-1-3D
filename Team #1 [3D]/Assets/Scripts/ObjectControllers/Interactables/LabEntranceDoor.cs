@@ -14,4 +14,9 @@ public class LabEntranceDoor : MonoBehaviour
         //audio.PlayOneShot(openSFX);
         Debug.Log("open door");
     }
+
+    public void CloseDoor()
+    {
+        Debug.Log("close Door");
+    }
 }
