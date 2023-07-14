@@ -8,6 +8,8 @@ public class PickupManager : MonoBehaviour
 
     public bool hasBattery;
     public bool hasKeyCard;
+    public bool hasEnergySource;
+    public bool hasPortalComponent;
 
     public void PickupBattery()
     {
@@ -31,5 +33,29 @@ public class PickupManager : MonoBehaviour
     {
         hasKeyCard = false;
         hudScript.Display02(hasKeyCard);
+    }
+
+    public void PickupEnergySource()
+    {
+        hasEnergySource = true;
+        hudScript.Display01(hasEnergySource);
+    }
+
+    public void PlaceEnergySource()
+    {
+        hasEnergySource = false;
+        hudScript.Display01(hasEnergySource);
+    }
+
+    public void PickupPortalComponent()
+    {
+        hasPortalComponent = true;
+        hudScript.Display02(hasPortalComponent);
+    }
+
+    public void PlacePortalComponent()
+    {
+        hasPortalComponent = false;
+        hudScript.Display02(hasPortalComponent);
     }
 }
