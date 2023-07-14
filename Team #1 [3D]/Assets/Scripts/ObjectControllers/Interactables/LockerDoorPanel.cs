@@ -6,7 +6,7 @@ public class LockerDoorPanel : MonoBehaviour
 {
     public GameObject panel;
     public GameObject HUD;
-    bool rightLocker = false;
+    bool correctLocker = false;
 
     public LockerPanel panelScript;
 
@@ -16,9 +16,9 @@ public class LockerDoorPanel : MonoBehaviour
         panel.SetActive(false);
         if (gameObject.tag == "Jerr")
         {
-            rightLocker = true;
+            correctLocker = true;
         }
-        panelScript.correctLocker = rightLocker;
+        panelScript.correctLocker = correctLocker;
     }
 
     public void OpenPanel()

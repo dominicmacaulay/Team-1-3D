@@ -9,12 +9,14 @@ public class CollisionsManager : MonoBehaviour
     public float panelTime;
     public float regenWait;
     public float panelIncrement;
+    public float deathAnimation;
 
     bool isTouchingAcid = false;
     bool isBeingShot = false;
 
     public Image acidPanel;
     public Image bulletPanel;
+    public GameObject gameOverPanel;
 
     float acidAlpha = 0;
     float bulletAlpha = 0;
@@ -112,6 +114,10 @@ public class CollisionsManager : MonoBehaviour
         yield return new WaitUntil(()=>panel.color.a > .4f);
 
         isAlive = false;
+        yield return new WaitForSeconds(deathAnimation);
+
+        gameOverPanel.SetActive(true);
+        Destroy(gameObject);
         Debug.Log(isAlive);
     }
 }

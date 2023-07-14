@@ -17,7 +17,6 @@ public class LockerPanel : MonoBehaviour
     int num3 = 0;
     int num4 = 0;
 
-    bool unlockable = false;
     public bool correctLocker;
 
     public LockerDoor doorScript;
