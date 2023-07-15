@@ -1,3 +1,4 @@
+using SUPERCharacter;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class GameOverPanel : MonoBehaviour
 {
     public GameObject player;
     public Vector3 respawnPoint;
+    public SUPERCharacterAIO characterController;
+    public GameObject HUD;
+    public CollisionsManager collisionsScript;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,10 @@ public class GameOverPanel : MonoBehaviour
 
     public void OnClickRestartButton()
     {
-        Instantiate(player, respawnPoint, Quaternion.identity);
+        collisionsScript.isAlive = true;
+        player.transform.position = respawnPoint;
         gameObject.SetActive(false);
+        characterController.UnpausePlayer();
+        HUD.SetActive(true);
     }
 }

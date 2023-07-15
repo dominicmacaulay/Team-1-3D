@@ -1,3 +1,4 @@
+using SUPERCharacter;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class CollisionsManager : MonoBehaviour
     public Image acidPanel;
     public Image bulletPanel;
     public GameObject gameOverPanel;
+    public SUPERCharacterAIO characterController;
+    public GameObject HUD;
 
     float acidAlpha = 0;
     float bulletAlpha = 0;
@@ -33,19 +36,20 @@ public class CollisionsManager : MonoBehaviour
         {
             isTouchingAcid = true;
             StartCoroutine(AcidEffect());
-            StartCoroutine(Death(acidPanel));
+            StartCoroutine(DeathCheck(acidPanel));
         }
 
         if (other.gameObject.tag == "lasers")
         {
-            isAlive = false;            
+            isAlive = false;
+            StartCoroutine(Death());
         }
 
         if (other.gameObject.tag == "turret")
         {
             isBeingShot = true;
             StartCoroutine(BulletEffect());
-            StartCoroutine(Death(bulletPanel));
+            StartCoroutine(DeathCheck(bulletPanel));
         }
     }
 
@@ -55,20 +59,20 @@ public class CollisionsManager : MonoBehaviour
         {
             isTouchingAcid = false;
             StartCoroutine(AcidRegen());
-            StopCoroutine(Death(acidPanel));
+            StopCoroutine(DeathCheck(acidPanel));
         }
 
         if (other.gameObject.tag == "turret")
         {
             isBeingShot = false;
             StartCoroutine(BulletRegen());
-            StopCoroutine(Death(bulletPanel));
+            StopCoroutine(DeathCheck(bulletPanel));
         }
     }
 
     IEnumerator AcidEffect()
     {
-        while (isTouchingAcid == true && acidPanel.color.a < 1)
+        while (isTouchingAcid == true && acidPanel.color.a < 1 & isAlive)
         {
             yield return new WaitForSeconds(panelTime);
             acidAlpha += panelIncrement;
@@ -89,7 +93,7 @@ public class CollisionsManager : MonoBehaviour
 
     IEnumerator BulletEffect()
     {
-        while (isBeingShot == true && bulletPanel.color.a < 1)
+        while (isBeingShot == true && bulletPanel.color.a < 1 && isAlive)
         {
             yield return new WaitForSeconds(panelTime);
             bulletAlpha += panelIncrement;
@@ -109,15 +113,23 @@ public class CollisionsManager : MonoBehaviour
         yield break;
     }
 
-    IEnumerator Death(Image panel)
+    IEnumerator DeathCheck(Image panel)
     {
         yield return new WaitUntil(()=>panel.color.a > .4f);
 
         isAlive = false;
-        yield return new WaitForSeconds(deathAnimation);
 
+        StartCoroutine(Death());
+    }
+
+    IEnumerator Death()
+    {
+        HUD.SetActive(false);
+        characterController.PausePlayer();
+        acidAlpha = 0;
+        bulletAlpha = 0;
+        yield return new WaitForSeconds(deathAnimation);
         gameOverPanel.SetActive(true);
-        Destroy(gameObject);
         Debug.Log(isAlive);
     }
 }
