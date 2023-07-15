@@ -15,8 +15,8 @@ public class CollisionsManager : MonoBehaviour
     bool isTouchingAcid = false;
     bool isBeingShot = false;
 
-    public Image acidPanel;
-    public Image bulletPanel;
+    public RawImage acidPanel;
+    public RawImage bulletPanel;
     public GameObject gameOverPanel;
     public SUPERCharacterAIO characterController;
     public GameObject HUD;
@@ -113,7 +113,7 @@ public class CollisionsManager : MonoBehaviour
         yield break;
     }
 
-    IEnumerator DeathCheck(Image panel)
+    IEnumerator DeathCheck(RawImage panel)
     {
         yield return new WaitUntil(()=>panel.color.a > .4f);
 

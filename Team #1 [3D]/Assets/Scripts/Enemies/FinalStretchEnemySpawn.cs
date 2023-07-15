@@ -10,7 +10,7 @@ public class FinalStretchEnemySpawn : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (pickupScript.hasBattery && pickupScript.hasKeyCard)
+            if (pickupScript.hasKeyCard)
             {
                 Debug.Log("spawn enemy");
             }

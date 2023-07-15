@@ -8,6 +8,17 @@ public class InsertBattery : MonoBehaviour
     public Animator anim;
     public bool isActivated;
 
+    public GameObject prop;
+    public GameObject keyCard;
+
+    private void Start()
+    {
+        if (gameObject.tag == "keypad battery")
+        {
+            keyCard.SetActive(false);
+        }
+    }
+
     public void BatteryAnimation()
     {
         if (pickupScript.hasBattery)
@@ -16,6 +27,12 @@ public class InsertBattery : MonoBehaviour
             //anim.SetTrigger("battery");
             isActivated = true;
             Debug.Log("battery inserted");
+
+            if (gameObject.tag == "keypad battery")
+            {
+                prop.SetActive(false);
+                keyCard.SetActive(true);
+            }
         }
     }
 }
