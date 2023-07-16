@@ -7,6 +7,8 @@ TagManager:
   - acid
   - lasers
   - turret
+  - keypad battery
+  - jerr
   layers:
   - Default
   - TransparentFX
