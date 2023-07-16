@@ -20,7 +20,7 @@ public class GameOverPanel : MonoBehaviour
 
     public void OnClickQuitButton()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void OnClickRestartButton()
