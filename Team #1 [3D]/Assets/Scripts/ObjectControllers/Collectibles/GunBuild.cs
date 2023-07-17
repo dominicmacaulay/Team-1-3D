@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class GunBuild : MonoBehaviour
 {
     public PickupManager pickupScript;
-    public GameObject message;
     public GameObject portalGun;
+    public GameObject promptTrigger;
+    public GameObject triggerPanel;
+    public TMP_Text message;
 
     bool hasPower;
     bool hasTeleport;
@@ -32,16 +34,20 @@ public class GunBuild : MonoBehaviour
         if (hasPower && hasTeleport)
         {
             portalGun.SetActive(true);
+            pickupScript.hasEnergySource = false;
+            pickupScript.hasPortalComponent = false;
+            promptTrigger.SetActive(false);
+            triggerPanel.SetActive(false);
         }
         else
         {
-            message.SetActive(true);
+            message.text = "Components Required";
             Invoke("DeactivateMessage", 2.5f);
         }
     }
 
     void DeactivateMessage()
     {
-        message.SetActive(false);
+        message.text = "Press E to construct PortalGun";
     }
 }
