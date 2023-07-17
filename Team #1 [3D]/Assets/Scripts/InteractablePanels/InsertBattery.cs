@@ -13,6 +13,7 @@ public class InsertBattery : MonoBehaviour
     public GameObject keyPadTrigger;
     public GameObject promptTrigger;
     public GameObject triggerPanel;
+    public GameObject switchTrigger;
 
     private void Start()
     {
@@ -20,6 +21,10 @@ public class InsertBattery : MonoBehaviour
         {
             keyCard.SetActive(false);
             keyPadTrigger.SetActive(false);
+        }
+        else
+        {
+            switchTrigger.SetActive(false);
         }
     }
 
@@ -39,6 +44,10 @@ public class InsertBattery : MonoBehaviour
                 prop.SetActive(false);
                 keyCard.SetActive(true);
                 keyPadTrigger.SetActive(true);
+            }
+            else
+            {
+                switchTrigger.SetActive(true);
             }
         }
     }

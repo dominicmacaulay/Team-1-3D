@@ -6,6 +6,7 @@ public class LaserSwitch : MonoBehaviour
 {
     public InsertBattery batteryScript;
     public LaserGrid laserGrid;
+    public LaserSwitchTracker trackScript;
 
     public void FlipSwitch()
     {
@@ -15,6 +16,14 @@ public class LaserSwitch : MonoBehaviour
             {
                 laserGrid.DisableGrid();
                 Debug.Log("laser disabled");
+                if (gameObject.tag == "switch01")
+                {
+                    trackScript.switchOne = true;
+                }
+                if (gameObject.tag == "switch02")
+                {
+                    trackScript.switchTwo = true;
+                }
             }
         }
     }
