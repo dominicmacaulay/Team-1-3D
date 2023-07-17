@@ -3,7 +3,22 @@ guid: 88f70aaca3db81043905139cee2076e1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToxicWasteMaterial
+    second: {fileID: 2100000, guid: 8bd8d11d3aa39a243942f93a3f4c05f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WasteBarrelDetailsMaterial
+    second: {fileID: 2100000, guid: 6a23b896467bd524c817992c512fca40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WasteBarrelMaterial
+    second: {fileID: 2100000, guid: 7529fce21effd2647b4dd903f9d7aa97, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
