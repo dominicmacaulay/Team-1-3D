@@ -34,8 +34,8 @@ public class GunBuild : MonoBehaviour
         if (hasPower && hasTeleport)
         {
             portalGun.SetActive(true);
-            pickupScript.hasEnergySource = false;
-            pickupScript.hasPortalComponent = false;
+            pickupScript.PlaceEnergySource();
+            pickupScript.PlacePortalComponent();
             promptTrigger.SetActive(false);
             triggerPanel.SetActive(false);
         }
