@@ -28,7 +28,7 @@ public class LabInitiationPanel : MonoBehaviour
             lightsAlpha = .5f;
             completedMessage.SetActive(false);
         }
-        else
+        if (SceneManager.GetActiveScene().name == "Level 2")
         {
             doorOpen = false;
             lightsAlpha = 1.0f;
