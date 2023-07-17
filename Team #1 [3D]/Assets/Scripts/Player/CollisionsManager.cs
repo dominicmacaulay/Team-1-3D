@@ -18,6 +18,7 @@ public class CollisionsManager : MonoBehaviour
     public RawImage acidPanel;
     public RawImage bulletPanel;
     public GameObject gameOverPanel;
+    public GameOverPanel panelScript;
     public SUPERCharacterAIO characterController;
     public GameObject HUD;
 
@@ -37,12 +38,14 @@ public class CollisionsManager : MonoBehaviour
             isTouchingAcid = true;
             StartCoroutine(AcidEffect());
             StartCoroutine(DeathCheck(acidPanel));
+            panelScript.causeOfDeath = "prolonged exposure to contaminated toxic waste";
         }
 
         if (other.gameObject.tag == "lasers")
         {
             isAlive = false;
             StartCoroutine(Death());
+            panelScript.causeOfDeath = "accidental or possibly forced contact with the laser defense mechanism";
         }
 
         if (other.gameObject.tag == "turret")
@@ -50,6 +53,7 @@ public class CollisionsManager : MonoBehaviour
             isBeingShot = true;
             StartCoroutine(BulletEffect());
             StartCoroutine(DeathCheck(bulletPanel));
+            panelScript.causeOfDeath = "a malfunction with the security turret's targeting system";
         }
     }
 
@@ -136,7 +140,7 @@ public class CollisionsManager : MonoBehaviour
     public void InstantDeath() {
         isAlive = false;
         gameOverPanel.SetActive(true);
-
+        panelScript.causeOfDeath = "a physical altercation with escaped test subjects";
         StartCoroutine(Death());
     }
 }

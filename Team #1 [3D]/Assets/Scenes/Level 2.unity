@@ -26001,6 +26001,7 @@ MonoBehaviour:
   acidPanel: {fileID: 2047592752}
   bulletPanel: {fileID: 1381720716}
   gameOverPanel: {fileID: 2034885129}
+  panelScript: {fileID: 2034885131}
   characterController: {fileID: 495526376}
   HUD: {fileID: 866994607}
 --- !u!54 &1104357490 stripped
@@ -46788,6 +46789,8 @@ MonoBehaviour:
   characterController: {fileID: 495526376}
   HUD: {fileID: 866994607}
   collisionsScript: {fileID: 1104357487}
+  report: {fileID: 1571906693}
+  causeOfDeath: 
 --- !u!114 &2034885132
 MonoBehaviour:
   m_ObjectHideFlags: 0
