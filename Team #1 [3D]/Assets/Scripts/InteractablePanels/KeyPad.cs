@@ -13,6 +13,7 @@ public class KeyPad : MonoBehaviour
     public GameObject labDoor;
 
     public GameObject promptTrigger;
+    public GameObject triggerPanel;
 
     public void Interaction()
     {
@@ -37,6 +38,7 @@ public class KeyPad : MonoBehaviour
         //anim.SetTrigger("correct");
         labDoor.GetComponent<LabEntranceDoor>().OpenDoor();
         promptTrigger.SetActive(false);
+        triggerPanel.SetActive(false);
     }
 
     void KeyCardRequired()

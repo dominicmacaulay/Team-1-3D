@@ -7,6 +7,7 @@ public class TurretPanelObject : MonoBehaviour
     public GameObject turretPanel;
     public GameObject HUD;
     public GameObject promptTrigger;
+    public GameObject triggerPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -19,5 +20,6 @@ public class TurretPanelObject : MonoBehaviour
         turretPanel.SetActive(true);
         HUD.SetActive(false);
         promptTrigger.SetActive(false);
+        triggerPanel.SetActive(false);
     }
 }

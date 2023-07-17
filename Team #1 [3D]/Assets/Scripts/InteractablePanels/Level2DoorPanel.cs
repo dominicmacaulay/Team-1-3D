@@ -8,6 +8,7 @@ public class Level2DoorPanel : MonoBehaviour
     public GameObject HUD;
 
     public GameObject promptTrigger;
+    public GameObject triggerPanel;
 
     void Start()
     {
@@ -19,5 +20,6 @@ public class Level2DoorPanel : MonoBehaviour
         panel.SetActive(true);
         HUD.SetActive(false);
         promptTrigger.SetActive(false);
+        triggerPanel.SetActive(false);
     }
 }

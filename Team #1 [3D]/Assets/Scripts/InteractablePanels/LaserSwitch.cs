@@ -7,8 +7,6 @@ public class LaserSwitch : MonoBehaviour
     public InsertBattery batteryScript;
     public LaserGrid laserGrid;
 
-    public GameObject promptTrigger;
-
     public void FlipSwitch()
     {
         if (batteryScript.isActivated)
@@ -17,7 +15,6 @@ public class LaserSwitch : MonoBehaviour
             {
                 laserGrid.DisableGrid();
                 Debug.Log("laser disabled");
-                promptTrigger.SetActive(false);
             }
         }
     }

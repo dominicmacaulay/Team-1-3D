@@ -32,4 +32,9 @@ public class TriggerPrompts : MonoBehaviour
             panel.SetActive(false);
         }
     }
+
+    public void HidePanel()
+    {
+        panel.SetActive(false);
+    }
 }
