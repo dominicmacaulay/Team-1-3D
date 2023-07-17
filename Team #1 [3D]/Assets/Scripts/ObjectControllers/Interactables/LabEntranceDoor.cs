@@ -8,15 +8,22 @@ public class LabEntranceDoor : MonoBehaviour
     public AudioSource audio;
     public AudioClip openSFX;
 
+    public LabInitiationPanel panelScript;
+
     public void OpenDoor()
     {
-        //anim.SetTrigger("openDoor");
+        anim.SetTrigger("Open");
         //audio.PlayOneShot(openSFX);
         Debug.Log("open door");
     }
 
     public void CloseDoor()
     {
-        Debug.Log("close Door");
+        anim.SetTrigger("Close");
+    }
+
+    public void DoorClosed()
+    {
+        panelScript.DoorClosed();
     }
 }

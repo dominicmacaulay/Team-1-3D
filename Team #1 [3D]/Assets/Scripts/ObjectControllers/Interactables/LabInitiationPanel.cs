@@ -38,7 +38,6 @@ public class LabInitiationPanel : MonoBehaviour
             doorOpen = false;
             doorScript.CloseDoor();
             pendingMessage.SetActive(true);
-            StartCoroutine(DoorClosed());
         }
     }
 
@@ -57,9 +56,8 @@ public class LabInitiationPanel : MonoBehaviour
         HUD.SetActive(true);
     }
 
-    IEnumerator DoorClosed()
+    public void DoorClosed()
     {
-        yield return new WaitForSeconds(doorCloseTime);
         pendingMessage.SetActive(false);
         completedMessage.SetActive(true);
         lightsAlpha = 1;
