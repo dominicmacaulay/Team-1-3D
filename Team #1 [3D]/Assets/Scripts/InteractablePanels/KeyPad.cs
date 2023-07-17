@@ -12,6 +12,8 @@ public class KeyPad : MonoBehaviour
     public AudioClip correctSFX;
     public GameObject labDoor;
 
+    public GameObject promptTrigger;
+
     public void Interaction()
     {
         if (batteryPanel.GetComponent<InsertBattery>().isActivated)
@@ -34,6 +36,7 @@ public class KeyPad : MonoBehaviour
         //audio.PlayOneShot(correctSFX);
         //anim.SetTrigger("correct");
         labDoor.GetComponent<LabEntranceDoor>().OpenDoor();
+        promptTrigger.SetActive(false);
     }
 
     void KeyCardRequired()
