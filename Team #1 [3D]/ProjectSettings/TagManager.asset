@@ -9,6 +9,8 @@ TagManager:
   - turret
   - keypad battery
   - jerr
+  - switch01
+  - switch02
   layers:
   - Default
   - TransparentFX
