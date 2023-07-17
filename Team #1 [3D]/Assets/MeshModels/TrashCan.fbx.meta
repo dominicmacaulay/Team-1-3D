@@ -3,7 +3,12 @@ guid: 2fd79602fb3404c44a966020dd51857e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrashCanMaterial
+    second: {fileID: 2100000, guid: a11a2feedc9fed645a810f83f4d68b50, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
