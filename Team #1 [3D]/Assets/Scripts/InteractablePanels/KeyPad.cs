@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KeyPad : MonoBehaviour
@@ -14,6 +15,7 @@ public class KeyPad : MonoBehaviour
 
     public GameObject promptTrigger;
     public GameObject triggerPanel;
+    public TMP_Text triggerText;
 
     public void Interaction()
     {
@@ -44,7 +46,14 @@ public class KeyPad : MonoBehaviour
     void KeyCardRequired()
     {
         Debug.Log("required");
+        triggerText.text = "Administrator Key Card Required";
         //audio.PlayOneShot(incorrectSFX);
         //anim.SetTrigger("incorrect");
+        Invoke("ResetText", 1.5f);
+    }
+
+    void ResetText()
+    {
+        triggerText.text = "Press E to swipe Key Card";
     }
 }

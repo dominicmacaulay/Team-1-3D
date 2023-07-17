@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InsertBattery : MonoBehaviour
@@ -14,6 +15,7 @@ public class InsertBattery : MonoBehaviour
     public GameObject promptTrigger;
     public GameObject triggerPanel;
     public GameObject switchTrigger;
+    public TMP_Text triggerText;
 
     private void Start()
     {
@@ -50,5 +52,15 @@ public class InsertBattery : MonoBehaviour
                 switchTrigger.SetActive(true);
             }
         }
+        else
+        {
+            triggerText.text = "Battery Required";
+            Invoke("ResetText", 1.5f);
+        }
+    }
+
+    void ResetText()
+    {
+        triggerText.text = "Press E to insert Battery";
     }
 }
