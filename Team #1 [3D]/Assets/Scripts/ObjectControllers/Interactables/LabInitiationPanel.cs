@@ -20,6 +20,7 @@ public class LabInitiationPanel : MonoBehaviour
 
     public LabEntranceDoor doorScript;
     public SUPERCharacterAIO characterController;
+    public GameObject promptTrigger;
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class LabInitiationPanel : MonoBehaviour
         gameObject.SetActive(false);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
+        promptTrigger.SetActive(true);
     }
 
     public void DoorClosed()

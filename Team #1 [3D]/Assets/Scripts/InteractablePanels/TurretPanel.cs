@@ -26,6 +26,9 @@ public class TurretPanel : MonoBehaviour
 
     public GameObject turret;
     public GameObject HUD;
+    public GameObject promptTrigger;
+
+    bool triggerStay = true;
 
     public SUPERCharacterAIO characterController;
 
@@ -80,6 +83,7 @@ public class TurretPanel : MonoBehaviour
         if (ready)
         {
             turret.GetComponent<GunTurret>().DeactivateTurret();
+            triggerStay = false;
         }
     }
 
@@ -88,6 +92,10 @@ public class TurretPanel : MonoBehaviour
         gameObject.SetActive(false);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
+        if (triggerStay)
+        {
+            promptTrigger.SetActive(true);
+        }
     }
 
     void UpdateButtonColor()
