@@ -8,6 +8,7 @@ public class GunBuild : MonoBehaviour
 {
     public PickupManager pickupScript;
     public GameObject message;
+    public GameObject portalGun;
 
     bool hasPower;
     bool hasTeleport;
@@ -15,6 +16,7 @@ public class GunBuild : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        portalGun.SetActive(false);
         DeactivateMessage();
     }
 
@@ -29,7 +31,7 @@ public class GunBuild : MonoBehaviour
     {
         if (hasPower && hasTeleport)
         {
-            //give player teleporter
+            portalGun.SetActive(true);
         }
         else
         {
