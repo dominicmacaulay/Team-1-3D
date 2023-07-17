@@ -17,6 +17,7 @@ public class LaserSwitchTracker : MonoBehaviour
         {
             promptTrigger.SetActive(false);
             triggerScript.HidePanel();
+            switchOne = false;
         }
     }
 }

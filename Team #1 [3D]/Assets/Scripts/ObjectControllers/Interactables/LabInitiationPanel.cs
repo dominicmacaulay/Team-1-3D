@@ -8,8 +8,6 @@ using SUPERCharacter;
 
 public class LabInitiationPanel : MonoBehaviour
 {
-    public float doorCloseTime;
-
     public GameObject HUD;
     public GameObject pendingMessage;
     public GameObject completedMessage;
@@ -46,7 +44,7 @@ public class LabInitiationPanel : MonoBehaviour
     {
         if (lightsReady)
         {
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene("Level 2");
         }
     }
 
