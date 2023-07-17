@@ -17,11 +17,12 @@ public class LockerPanel : MonoBehaviour
     int num3 = 0;
     int num4 = 0;
 
-    public bool correctLocker;
-
     public LockerDoor doorScript;
     public GameObject HUD;
     public SUPERCharacterAIO characterController;
+    public GameObject promptTrigger;
+
+    bool triggerStay = true;
 
     // Update is called once per frame
     void Update()
@@ -124,9 +125,10 @@ public class LockerPanel : MonoBehaviour
 
     public void OnClickEnter()
     {
-        if (num1 == 3 && num2 == 8 && num3 == 2 && num4 == 5 && correctLocker)
+        if (num1 == 3 && num2 == 8 && num3 == 2 && num4 == 5)
         {
             doorScript.OpenDoor();
+            triggerStay = false;
             // unlock animation
         }
         else
@@ -140,5 +142,9 @@ public class LockerPanel : MonoBehaviour
         gameObject.SetActive(false);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
+        if (triggerStay)
+        {
+            promptTrigger.SetActive(true);
+        }
     }
 }

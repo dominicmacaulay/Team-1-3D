@@ -3,7 +3,27 @@ guid: 9a77742793f06c64fb0bddad16265b99
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BatteryScreen
+    second: {fileID: 2100000, guid: 97cb9e77aba9b6b449bef15bdd0def65, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Socket
+    second: {fileID: 2100000, guid: d91e1d6fede985d4dbc1e83e8af5432f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SocketDetail
+    second: {fileID: 2100000, guid: 016da13927e905a4ca17748c672e36d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 96dc2399e1ab854468ae6f07291449ae, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

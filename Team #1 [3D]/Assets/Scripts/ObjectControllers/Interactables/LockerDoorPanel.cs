@@ -6,24 +6,18 @@ public class LockerDoorPanel : MonoBehaviour
 {
     public GameObject panel;
     public GameObject HUD;
-    bool correctLocker = false;
-
-    public LockerPanel panelScript;
+    public GameObject promptTrigger;
 
     // Start is called before the first frame update
     void Start()
     {
         panel.SetActive(false);
-        if (gameObject.tag == "Jerr")
-        {
-            correctLocker = true;
-        }
-        panelScript.correctLocker = correctLocker;
     }
 
     public void OpenPanel()
     {
         panel.SetActive(true);
         HUD.SetActive(false);
+        promptTrigger.SetActive(false);
     }
 }

@@ -3,7 +3,17 @@ guid: a5c0bbfc9b6f81144b5bc76fcce411bf
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WasteBarrelDetailsMaterial
+    second: {fileID: 2100000, guid: fb42f7ed98b42384489cc08ac80a109f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WasteBarrelMaterial
+    second: {fileID: 2100000, guid: bb48b4712bb257e4091abd8e76f23d06, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
