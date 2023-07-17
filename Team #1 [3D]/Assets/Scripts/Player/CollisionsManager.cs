@@ -132,4 +132,11 @@ public class CollisionsManager : MonoBehaviour
         gameOverPanel.SetActive(true);
         Debug.Log(isAlive);
     }
+
+    public void InstantDeath() {
+        isAlive = false;
+        gameOverPanel.SetActive(true);
+
+        StartCoroutine(Death());
+    }
 }
