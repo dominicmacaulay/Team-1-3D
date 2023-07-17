@@ -6,6 +6,8 @@ public class BarrierCall : MonoBehaviour
 {
     public GameObject directionPanel;
     bool inRange = false;
+    public GameObject obstacle;
+    bool exist = true;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,9 @@ public class BarrierCall : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("call enemy");
+                obstacle.SetActive(false);
+                exist = false;
+                directionPanel.SetActive(false);
                 //call enemy
             }
         }
@@ -28,7 +33,7 @@ public class BarrierCall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && exist)
         {
             directionPanel.SetActive(true);
             inRange = true;

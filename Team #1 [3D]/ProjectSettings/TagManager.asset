@@ -11,6 +11,7 @@ TagManager:
   - jerr
   - switch01
   - switch02
+  - portal
   layers:
   - Default
   - TransparentFX

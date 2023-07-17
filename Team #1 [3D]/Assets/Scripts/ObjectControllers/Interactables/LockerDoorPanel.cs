@@ -8,11 +8,13 @@ public class LockerDoorPanel : MonoBehaviour
     public GameObject HUD;
     public GameObject promptTrigger;
     public GameObject triggerPanel;
+    public GameObject pickupTrigger;
 
     // Start is called before the first frame update
     void Start()
     {
         panel.SetActive(false);
+        pickupTrigger.SetActive(false);
     }
 
     public void OpenPanel()
