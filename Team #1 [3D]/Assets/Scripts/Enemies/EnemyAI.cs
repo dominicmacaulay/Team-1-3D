@@ -35,7 +35,12 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
 
+        InitialPath();
+    }
+
+    public void InitialPath() {
         currentWalkPoint = walkPointOne;
+        playerSeen = false;
     }
 
     private void Update()
@@ -100,7 +105,8 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(player);
         
 
-        gameObject.SetActive(false);
+        InitialPath();
+        transform.position = walkPointTwo;
 
         if (!alreadyAttacked)
         {
