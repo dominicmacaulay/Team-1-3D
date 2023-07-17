@@ -48,12 +48,12 @@ public class LevelManager : MonoBehaviour
     IEnumerator CreditsTransition()
     {
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("Main Menu");
     }
 
     IEnumerator WinTransition()
     {
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Credits");
     }
 }
