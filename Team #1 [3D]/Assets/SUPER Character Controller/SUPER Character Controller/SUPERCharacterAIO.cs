@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -296,7 +297,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
     #endregion
     void Start(){
    
-        
+        StartCoroutine(CheckLevelName());
         
         #region Camera
         maxCameraDistInternal = maxCameraDistance;
@@ -601,6 +602,19 @@ public class SUPERCharacterAIO : MonoBehaviour{
             #endregion
         }
     }
+        IEnumerator CheckLevelName()
+        {
+            yield return new WaitForSeconds(.1f);
+            if (SceneManager.GetActiveScene().name == "Level 2")
+            {
+                PausePlayer();
+            }
+            if (SceneManager.GetActiveScene().name == "Main Menu")
+            {
+                PausePlayer();
+            }
+        }
+
     private void OnTriggerEnter(Collider other){
         #region Collectables
         other.GetComponent<ICollectable>()?.Collect();

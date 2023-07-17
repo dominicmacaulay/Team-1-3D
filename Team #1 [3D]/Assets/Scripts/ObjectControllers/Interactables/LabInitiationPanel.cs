@@ -33,7 +33,6 @@ public class LabInitiationPanel : MonoBehaviour
             doorOpen = false;
             lightsAlpha = 1.0f;
             completedMessage.SetActive(true);
-            characterController.PausePlayer();
         }
     }
 
