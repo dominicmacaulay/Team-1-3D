@@ -53,6 +53,7 @@ public class EnemyAI : MonoBehaviour
     {
         
         SearchWalkPoint();
+        agent.speed = 3f;
         
         if (!playerSeen) agent.destination = currentWalkPoint;
 
@@ -89,6 +90,7 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayer()
     {
         playerSeen = true;
+        agent.speed = 8f;
         agent.destination = player.position;
     }
 
