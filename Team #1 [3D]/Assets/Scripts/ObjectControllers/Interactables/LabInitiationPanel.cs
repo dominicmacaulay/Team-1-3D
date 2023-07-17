@@ -45,7 +45,7 @@ public class LabInitiationPanel : MonoBehaviour
     {
         if (lightsReady)
         {
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene("Win");
         }
     }
 
