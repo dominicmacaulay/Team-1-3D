@@ -13,17 +13,28 @@ public class LabInitiationPanel : MonoBehaviour
     public GameObject completedMessage;
     public Image lightsButton;
     bool lightsReady = false;
-    float lightsAlpha = .5f;
-    bool doorOpen = true;
+    float lightsAlpha;
+    bool doorOpen;
 
     public LabEntranceDoor doorScript;
     public SUPERCharacterAIO characterController;
-    public GameObject promptTrigger;
 
     void Start()
     {
         pendingMessage.SetActive(false);
-        completedMessage.SetActive(false);
+        if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            doorOpen = true;
+            lightsAlpha = .5f;
+            completedMessage.SetActive(false);
+        }
+        else
+        {
+            doorOpen = false;
+            lightsAlpha = 1.0f;
+            completedMessage.SetActive(true);
+            characterController.PausePlayer();
+        }
     }
 
     void Update()
@@ -53,7 +64,6 @@ public class LabInitiationPanel : MonoBehaviour
         gameObject.SetActive(false);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
-        promptTrigger.SetActive(true);
     }
 
     public void DoorClosed()
