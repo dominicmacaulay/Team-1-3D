@@ -6,8 +6,9 @@ public class BarrierCall : MonoBehaviour
 {
     public GameObject directionPanel;
     bool inRange = false;
-    public GameObject obstacle;
     bool exist = true;
+
+    public SuicideAI enemyScript;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +22,10 @@ public class BarrierCall : MonoBehaviour
         if (inRange)
         {
             if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("call enemy");
-                obstacle.SetActive(false);
+            {                
                 exist = false;
                 directionPanel.SetActive(false);
+                enemyScript.OnCall();
                 //call enemy
             }
         }

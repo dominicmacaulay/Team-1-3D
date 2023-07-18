@@ -137,9 +137,9 @@ public class CollisionsManager : MonoBehaviour
         Debug.Log(isAlive);
     }
 
-    public void InstantDeath() {
+    public void InstantDeath() 
+    {
         isAlive = false;
-        gameOverPanel.SetActive(true);
         panelScript.causeOfDeath = "a physical altercation with escaped test subjects";
         StartCoroutine(Death());
     }
