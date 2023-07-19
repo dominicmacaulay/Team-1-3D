@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class HUDPickups : MonoBehaviour
 {
-    public GameObject display01;
-    public GameObject display02;
+    public GameObject display01_color, display01_default;
+    public GameObject display02_color, display02_default;
 
     void Start()
     {
-        display01.SetActive(false);
-        display02.SetActive(false);
+        display01_color.SetActive(false);
+        display02_color.SetActive(false);
     }
 
     public void Display01(bool active)
     {
-        display01.SetActive(active);
+        display01_color.SetActive(active);
+        display01_default.SetActive(!active);
     }
 
     public void Display02(bool active)
     {
-        display02.SetActive(active);
+        display02_color.SetActive(active);
+        display02_default.SetActive(!active);
     }
 }
