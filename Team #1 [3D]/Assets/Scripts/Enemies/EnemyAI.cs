@@ -40,6 +40,7 @@ public class EnemyAI : MonoBehaviour
 
     public void InitialPath() {
         currentWalkPoint = walkPointOne;
+        agent.Warp(walkPointTwo);
         playerSeen = false;
     }
 
@@ -106,7 +107,6 @@ public class EnemyAI : MonoBehaviour
         
 
         InitialPath();
-        transform.position = walkPointTwo;
 
         if (!alreadyAttacked)
         {
