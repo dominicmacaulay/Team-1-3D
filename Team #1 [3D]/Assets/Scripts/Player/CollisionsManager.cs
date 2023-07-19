@@ -17,10 +17,10 @@ public class CollisionsManager : MonoBehaviour
 
     public RawImage acidPanel;
     public RawImage bulletPanel;
-    public GameObject gameOverPanel;
     public GameOverPanel panelScript;
     public SUPERCharacterAIO characterController;
     public GameObject HUD;
+    public GunTurret turretScript;
 
     float acidAlpha = 0;
     float bulletAlpha = 0;
@@ -122,18 +122,20 @@ public class CollisionsManager : MonoBehaviour
         yield return new WaitUntil(()=>panel.color.a > .4f);
 
         isAlive = false;
-
+        StopCoroutine(BulletEffect());
+        StopCoroutine(AcidEffect());
         StartCoroutine(Death());
     }
 
     IEnumerator Death()
     {
         HUD.SetActive(false);
-        characterController.PausePlayer();
+        characterController.PausePlayerForTransition();
+        turretScript.inRange = false;
         acidAlpha = 0;
         bulletAlpha = 0;
         yield return new WaitForSeconds(deathAnimation);
-        gameOverPanel.SetActive(true);
+        panelScript.anim.SetTrigger("respawn");
         Debug.Log(isAlive);
     }
 

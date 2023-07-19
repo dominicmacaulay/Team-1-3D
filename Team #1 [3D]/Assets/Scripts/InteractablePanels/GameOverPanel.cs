@@ -14,28 +14,21 @@ public class GameOverPanel : MonoBehaviour
     public CollisionsManager collisionsScript;
     public TMP_Text report;
     public string causeOfDeath;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        gameObject.SetActive(false);
-    }
+    public Animator anim;
 
     private void Update()
     {
         report.text = "January 15th, 2031\r\n\r\nSecurity Officer: Dean Parker\r\n\r\nTerminated during aether testing malfunction. Cause of death found to be " + causeOfDeath + ".\r\n\r\nAccounted Casualty #35";
     }
 
-    public void OnClickQuitButton()
+    public void SetPosition()
     {
-        SceneManager.LoadScene("Main Menu");
+        player.transform.position = respawnPoint;
     }
 
-    public void OnClickRestartButton()
+    public void Respawn()
     {
         collisionsScript.isAlive = true;
-        player.transform.position = respawnPoint;
-        gameObject.SetActive(false);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
     }

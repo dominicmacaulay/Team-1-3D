@@ -1577,6 +1577,34 @@ public class SUPERCharacterAIO : MonoBehaviour{
         if(a_velocity != ""){
                 _3rdPersonCharacterAnimator.SetFloat(a_velocity, 0);   
         }
+    }public void PausePlayerForTransition(){
+        PauseModes pauseMode = PauseModes.FreezeInPlace;
+        controllerPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        switch(pauseMode){
+            case PauseModes.MakeKinematic:{
+                p_Rigidbody.isKinematic = true;
+            }break;
+            
+            case PauseModes.FreezeInPlace:{
+                 p_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            }break;
+
+            case PauseModes.BlockInputOnly:{
+
+            }break;
+        }
+       
+        p_Rigidbody.velocity = Vector3.zero;
+        InputDir = Vector2.zero;
+        MovInput = Vector2.zero;
+        MovInput_Smoothed = Vector2.zero;
+        capsule.sharedMaterial = _MaxFriction;
+        
+        UpdateAnimationTriggers(true);
+        if(a_velocity != ""){
+                _3rdPersonCharacterAnimator.SetFloat(a_velocity, 0);   
+        }
     }
     public void UnpausePlayer(float delay = 0){
         if(delay==0){

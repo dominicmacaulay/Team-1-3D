@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class GunTurret : MonoBehaviour
 {
-    public Animator anim;
+    public Transform idlePoint, turretHead, inactivePoint, player, muzzlePoint;
 
-    public Transform idlePoint;
-    public Transform inactivePoint;
-    public Transform player;
-    public Transform turretHead;
-
+    public GameObject SFX;
     public Collider turretPath;
 
     bool isActive = true;
-    bool inRange = false;
+    public bool inRange = false;
 
     void Update()
     {
@@ -27,6 +23,7 @@ public class GunTurret : MonoBehaviour
         {
             //anim.SetBool("isShooting", true);
             inRange = true;
+            StartCoroutine(SpawnSFX());
         }
     }
 
@@ -36,6 +33,7 @@ public class GunTurret : MonoBehaviour
         {
             //anim.SetBool("isShooting", false);
             inRange = false;
+            StopCoroutine(SpawnSFX());
         }
     }
 
@@ -60,5 +58,14 @@ public class GunTurret : MonoBehaviour
         isActive = false;
         turretPath.enabled = false;
         //anim.SetBool("isInactive", true);
+    }
+
+    public IEnumerator SpawnSFX()
+    {
+        while (inRange)
+        {
+            Instantiate(SFX, muzzlePoint.position, Quaternion.Euler(new Vector3(0, -90, 0)));
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }

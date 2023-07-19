@@ -8,12 +8,20 @@ public class LaserSwitch : MonoBehaviour
     public LaserGrid laserGrid;
     public LaserSwitchTracker trackScript;
 
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     public void FlipSwitch()
     {
         if (batteryScript.isActivated)
         {
             if (laserGrid.isDisabled == false)
             {
+                anim.SetTrigger("flip");
                 laserGrid.DisableGrid();
                 Debug.Log("laser disabled");
                 if (gameObject.tag == "switch01")
