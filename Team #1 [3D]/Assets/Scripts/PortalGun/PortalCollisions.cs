@@ -6,6 +6,7 @@ public class PortalCollisions : MonoBehaviour
 {
     public GameObject player;
     public Vector3 portalJump;
+    public GameObject portalSFX;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +19,7 @@ public class PortalCollisions : MonoBehaviour
     IEnumerator Teleport()
     {
         player.transform.position = portalJump;
+        Instantiate(portalSFX, player.transform.position, Quaternion.identity);
         yield return null;
     }
 }

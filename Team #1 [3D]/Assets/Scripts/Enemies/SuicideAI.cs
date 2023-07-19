@@ -11,8 +11,9 @@ public class SuicideAI : MonoBehaviour
     public LayerMask whatIsObstacle;
     public LayerMask whatIsPlayer;
     public GameObject explosionSFX;
-    public Transform explosionPoint;
+    public Transform explosionPoint, respawnPoint;
     public CollisionsManager playerScript;
+    public BarrierCall callScript;
 
 
     // Start is called before the first frame update
@@ -41,14 +42,21 @@ public class SuicideAI : MonoBehaviour
 
     IEnumerator Destroy()
     {
-        if (player)
-        {
-            playerScript.InstantDeath();
-        }
         Instantiate(explosionSFX, explosionPoint.position, Quaternion.identity);
         yield return new WaitForSeconds(.1f);
-
-        Destroy(gameObject);
-        Destroy(obstacle);
+        obstacle.SetActive(false);
+        if (player)
+        {
+            agent.destination = respawnPoint.position;
+            playerScript.InstantDeath();
+            yield return new WaitForSeconds(1.5f);            
+            gameObject.SetActive(true);
+            obstacle.SetActive(true);
+            callScript.exist = true;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

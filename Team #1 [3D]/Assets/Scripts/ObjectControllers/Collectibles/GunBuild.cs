@@ -38,6 +38,7 @@ public class GunBuild : MonoBehaviour
             pickupScript.PlacePortalComponent();
             promptTrigger.SetActive(false);
             triggerPanel.SetActive(false);
+            gameObject.SetActive(false);
         }
         else
         {

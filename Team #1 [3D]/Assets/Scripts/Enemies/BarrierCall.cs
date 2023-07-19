@@ -6,7 +6,7 @@ public class BarrierCall : MonoBehaviour
 {
     public GameObject directionPanel;
     bool inRange = false;
-    bool exist = true;
+    public bool exist = true;
 
     public SuicideAI enemyScript;
 
