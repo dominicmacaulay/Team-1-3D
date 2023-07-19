@@ -21,7 +21,7 @@ public class LaserSwitch : MonoBehaviour
         {
             if (laserGrid.isDisabled == false)
             {
-                anim.SetTrigger("flip");
+                anim.SetTrigger("Flip");
                 laserGrid.DisableGrid();
                 Debug.Log("laser disabled");
                 if (gameObject.tag == "switch01")
