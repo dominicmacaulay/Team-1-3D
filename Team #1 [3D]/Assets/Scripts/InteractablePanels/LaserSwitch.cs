@@ -12,7 +12,7 @@ public class LaserSwitch : MonoBehaviour
 
     private void Start()
     {
-        anim = GetComponent<Animator>();
+        
     }
 
     public void FlipSwitch()
@@ -21,15 +21,17 @@ public class LaserSwitch : MonoBehaviour
         {
             if (laserGrid.isDisabled == false)
             {
-                anim.SetTrigger("Flip");
+                anim = GetComponent<Animator>();
                 laserGrid.DisableGrid();
                 Debug.Log("laser disabled");
                 if (gameObject.tag == "switch01")
                 {
+                    anim.SetTrigger("Flip");
                     trackScript.switchOne = true;
                 }
                 if (gameObject.tag == "switch02")
                 {
+                    anim.SetTrigger("Flip");
                     trackScript.switchTwo = true;
                 }
             }
