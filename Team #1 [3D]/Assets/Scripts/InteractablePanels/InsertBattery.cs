@@ -32,10 +32,10 @@ public class InsertBattery : MonoBehaviour
 
     public void BatteryAnimation()
     {
-        if (pickupScript.hasBattery)
+        if (pickupScript.hasBattery && isActivated == false)
         {
             pickupScript.PlaceBattery();
-            //anim.SetTrigger("battery");
+            anim.SetTrigger("insert");
             isActivated = true;
             Debug.Log("battery inserted");
             promptTrigger.SetActive(false);

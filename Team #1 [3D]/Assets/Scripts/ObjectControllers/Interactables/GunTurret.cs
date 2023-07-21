@@ -8,6 +8,7 @@ public class GunTurret : MonoBehaviour
 
     public GameObject SFX;
     public Collider turretPath;
+    public Animator anim;
 
     bool isActive = true;
     public bool inRange = false;
@@ -41,15 +42,16 @@ public class GunTurret : MonoBehaviour
     {
         if (isActive && inRange)
         {
-            turretHead.LookAt(player);
+            //turretHead.LookAt(player);
         }
         else if (isActive)
         {
-            turretHead.LookAt(idlePoint);
+            //turretHead.LookAt(idlePoint);
         }
         else if (isActive == false)
         {
-            turretHead.LookAt(inactivePoint);
+            //turretHead.LookAt(inactivePoint);
+            anim.SetTrigger("inactive");
         }
     }
 
