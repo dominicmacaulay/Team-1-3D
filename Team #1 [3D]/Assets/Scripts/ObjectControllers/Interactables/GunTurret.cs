@@ -15,7 +15,7 @@ public class GunTurret : MonoBehaviour
 
     void Update()
     {
-        Look();
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,28 +38,17 @@ public class GunTurret : MonoBehaviour
         }
     }
 
-    void Look()
-    {
-        if (isActive && inRange)
-        {
-            //turretHead.LookAt(player);
-        }
-        else if (isActive)
-        {
-            //turretHead.LookAt(idlePoint);
-        }
-        else if (isActive == false)
-        {
-            //turretHead.LookAt(inactivePoint);
-            anim.SetTrigger("inactive");
-        }
-    }
-
     public void DeactivateTurret()
     {
         isActive = false;
         turretPath.enabled = false;
         //anim.SetBool("isInactive", true);
+        Invoke("Animation", 2);
+    }
+
+    void Animation()
+    {
+        anim.SetTrigger("Inactive");
     }
 
     public IEnumerator SpawnSFX()
