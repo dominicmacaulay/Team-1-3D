@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -343,8 +343,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Alexander Patterson
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -479,8 +479,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Modeler
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -615,8 +615,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Joshua Faggion
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -869,8 +869,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dominic MacAulay
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1005,8 +1005,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Developer Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1289,8 +1289,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Kayla Haraway
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16642933, g: 0.41509432, b: 0.40968853, a: 1}
+  m_Color: {r: 0.22227661, g: 0.3250492, b: 0.4245283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1510,8 +1510,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Programmer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1646,8 +1646,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Model Texurer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1782,8 +1782,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Programmer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f9478f3843631148871b6e081ec86c9, type: 2}
-  m_sharedMaterial: {fileID: -3351179443078763821, guid: 8f9478f3843631148871b6e081ec86c9,
+  m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
+  m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
