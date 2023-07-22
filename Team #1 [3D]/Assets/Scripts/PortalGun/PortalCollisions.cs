@@ -13,6 +13,7 @@ public class PortalCollisions : MonoBehaviour
         if (other.gameObject.tag == "portal")
         {
             StartCoroutine(Teleport());
+            Destroy(other.gameObject);
         }
     }
 
