@@ -37,10 +37,10 @@ public class KeyPad : MonoBehaviour
         pickupScript.PlaceKeyCard();
         Debug.Log("swiped");
         //audio.PlayOneShot(correctSFX);
-        //anim.SetTrigger("correct");
-        labDoor.GetComponent<LabEntranceDoor>().OpenDoor();
+        anim.SetTrigger("swipe");
         promptTrigger.SetActive(false);
         triggerPanel.SetActive(false);
+        Invoke("DoorSwipe", 1.5f);
     }
 
     void KeyCardRequired()
@@ -55,5 +55,11 @@ public class KeyPad : MonoBehaviour
     void ResetText()
     {
         triggerText.text = "Press E to swipe Key Card";
+    }
+
+    void DoorSwipe()
+    {
+
+        labDoor.GetComponent<LabEntranceDoor>().OpenDoor();
     }
 }
