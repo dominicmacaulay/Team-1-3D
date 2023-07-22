@@ -3,7 +3,37 @@ guid: ae46a7d8423479740b08c0b280426e9e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandleBaseMaterial
+    second: {fileID: 2100000, guid: fc0ce9dad9848b5408e2fd0a632043c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandleMaterial
+    second: {fileID: 2100000, guid: cf21d03536e40ed4aa548498d2e13382, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandleMetalMaterial
+    second: {fileID: 2100000, guid: a6a1aafb36d621446b518fb226241431, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandleONLight
+    second: {fileID: 2100000, guid: af0d6aa0fa37d094691eaf13795e025f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandleScrewMaterial
+    second: {fileID: 2100000, guid: 0b9cc241dd9e9b046b1944a2ad71989e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ScrewMaterial
+    second: {fileID: 2100000, guid: 0b9cc241dd9e9b046b1944a2ad71989e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

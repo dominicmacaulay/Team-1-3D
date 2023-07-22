@@ -3,7 +3,17 @@ guid: 3c02b7dcffda9d94fb67d6ae55eef3a2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserBaseMaterial
+    second: {fileID: 2100000, guid: 74aaa5ff7ed9adb4c957a78c6fc38ea2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserWallMaterial
+    second: {fileID: 2100000, guid: 58535d2afbe38d140b5e2987be4d4182, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

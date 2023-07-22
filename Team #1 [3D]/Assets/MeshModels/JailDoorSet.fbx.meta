@@ -3,7 +3,22 @@ guid: 02da3f66a9b4cc4448ecef1502181b9d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JailDoorFrameMaterial
+    second: {fileID: 2100000, guid: 7f11ac68c30f0a547b0dc57d02dd4f64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JailDoorHingeMaterial
+    second: {fileID: 2100000, guid: 1e964c44a4286a24e8066e836f397904, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: JailDoorMaterial
+    second: {fileID: 2100000, guid: 6220d08477c53d44c88b05e32eb998d6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

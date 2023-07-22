@@ -3,7 +3,17 @@ guid: c338b92abf7ef8f44b9a0efe06cde128
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InnerCornerWallLights
+    second: {fileID: 2100000, guid: 98c8050ff7df12746bbdd9f48b68a7f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InnerWallCornerMaterial
+    second: {fileID: 2100000, guid: 3a8b066c2c2c18845b35f8e2969c1eb0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

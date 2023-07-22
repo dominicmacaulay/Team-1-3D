@@ -3,7 +3,17 @@ guid: af50b83a3763f334f90d5e480ab5e100
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutieWallCornerLights
+    second: {fileID: 2100000, guid: 98c8050ff7df12746bbdd9f48b68a7f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OutieWallWallMaterial
+    second: {fileID: 2100000, guid: b72dba2eef4d6024fa572307db93333b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
