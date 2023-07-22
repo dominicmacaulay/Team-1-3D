@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Credits.unity
     guid: 2734d247f5fbb7b45b1bcfdbdfbd2d09
+  - enabled: 1
+    path: Assets/Scenes/Menus/Apple Win.unity
+    guid: 340fecfea9968414a982bcb649e8fa65
   m_configObjects: {}
