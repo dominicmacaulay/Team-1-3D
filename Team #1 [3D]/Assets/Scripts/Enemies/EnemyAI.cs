@@ -8,10 +8,13 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
+    public CollisionsManager playerScript;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
     public float health;
+
+    public GameObject explosionSFX;
 
     //Patroling
     public Vector3 walkPointOne;
@@ -102,7 +105,8 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        player.GetComponent<CollisionsManager>().InstantDeath();
+        StartCoroutine(KillPlayer());
+
         transform.LookAt(player);
         
 
@@ -116,20 +120,11 @@ public class EnemyAI : MonoBehaviour
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
+
+
     private void ResetAttack()
     {
         alreadyAttacked = false;
-    }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
-    }
-    private void DestroyEnemy()
-    {
-        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
@@ -138,5 +133,13 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
+
+    IEnumerator KillPlayer()
+    {
+        Instantiate(explosionSFX, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(.1f);
+
+        playerScript.InstantDeath();
     }
 }
