@@ -3,7 +3,17 @@ guid: 84f6da135937bb34ca55a27f50c80919
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MousButtonsMaterial
+    second: {fileID: 2100000, guid: ed30bb3f76b2435468b438bbdce53651, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MouseMaterial
+    second: {fileID: 2100000, guid: 77aa19e20a37ad843b12e980380a9630, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

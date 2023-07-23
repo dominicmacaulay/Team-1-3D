@@ -3,7 +3,27 @@ guid: 38d3250e33c8be043b8a5ec53135e4b0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabinatDoorDetails
+    second: {fileID: 2100000, guid: af9639eb548e3be4a82562a151caf6bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabinatDoorsMaterial
+    second: {fileID: 2100000, guid: a4d3b1e4b9a77004f8472d99c8f9db2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabinatHingeMaterial
+    second: {fileID: 2100000, guid: bdd92c28cbe400d4eb5fa7410dac5ed6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CabinatMaterial
+    second: {fileID: 2100000, guid: 4236fca771b1f7246beb0404fedc6d69, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

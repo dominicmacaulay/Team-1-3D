@@ -3,7 +3,17 @@ guid: d6f1a8784b4f26e4282d5eb3cd61dd64
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: KeyBoardMaterial
+    second: {fileID: 2100000, guid: c366452668c791c4ab547d839a24d63f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keysmaterial
+    second: {fileID: 2100000, guid: 08921dcc56279de4db8f7a4cc75e9c70, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

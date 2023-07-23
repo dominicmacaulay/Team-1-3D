@@ -3,7 +3,12 @@ guid: 8ffc6d5888ff44347bce51fb1873ea05
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TallBottleMaterial
+    second: {fileID: 2100000, guid: 97202312b14fd2246ba3e5a983247b0a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
