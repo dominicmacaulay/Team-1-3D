@@ -3,7 +3,17 @@ guid: 88342d58f01306f4393f06805b8db705
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalLiquidGlassMaterial
+    second: {fileID: 2100000, guid: bd224a9fb00184f44a90595206ecb147, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalLiquidMaterial
+    second: {fileID: 2100000, guid: b1461ded4fec62d4e9824e6e6e90c8bf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

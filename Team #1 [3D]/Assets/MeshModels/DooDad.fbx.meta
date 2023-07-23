@@ -3,7 +3,32 @@ guid: 9b683274876728446be7fc695a04c439
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DooDadKeysMaterial
+    second: {fileID: 2100000, guid: 347388c23d8462e4cbd7cb5c9a8820b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DooDadLabel
+    second: {fileID: 2100000, guid: f74ea78104c51f14fbd73b6fb78ac898, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DooDadLightBaseMaterial
+    second: {fileID: 2100000, guid: 336c26497845ea54f99fb4414b9688ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DooDadLightMaterial
+    second: {fileID: 2100000, guid: 885fa6788fe988340946221c4c33afa1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DooDadMaterial
+    second: {fileID: 2100000, guid: 4d65bf8c8f52b9f40913082687d5075c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

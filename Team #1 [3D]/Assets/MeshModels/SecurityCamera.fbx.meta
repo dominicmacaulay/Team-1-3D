@@ -3,7 +3,27 @@ guid: 1ebc5de96a1984e42b0295ba811ca562
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CameraMaterial
+    second: {fileID: 2100000, guid: d91fa67bf1345d5498afcbcb6436c552, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lense
+    second: {fileID: 2100000, guid: 056a5ad8d95b5904e98e99a0037e7f62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SecurityCameraHardwareMaterial
+    second: {fileID: 2100000, guid: 0c5ec647e4875664cab29446cb6bd283, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SecurityCameraScrewMaterial
+    second: {fileID: 2100000, guid: 9e70206c89fef2847a3d230dee166ac9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
