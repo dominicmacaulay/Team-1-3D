@@ -33,6 +33,8 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    public Animator anim;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -60,7 +62,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Patroling()
     {
-        
+        anim.SetBool("run", false);
+        anim.SetBool("walk", true);
         SearchWalkPoint();
         agent.speed = 3f;
         
@@ -98,6 +101,8 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayer()
     {
+        anim.SetBool("walk", false);
+        anim.SetBool("run", true);
         playerSeen = true;
         agent.speed = 8f;
         agent.destination = player.position;
