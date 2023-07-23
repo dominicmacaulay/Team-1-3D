@@ -136,7 +136,6 @@ public class CollisionsManager : MonoBehaviour
         bulletAlpha = 0;
         yield return new WaitForSeconds(deathAnimation);
         panelScript.anim.SetTrigger("respawn");
-        Debug.Log(isAlive);
     }
 
     public void InstantDeath() 
