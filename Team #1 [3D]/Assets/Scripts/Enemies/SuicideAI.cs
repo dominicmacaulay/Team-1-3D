@@ -15,6 +15,8 @@ public class SuicideAI : MonoBehaviour
     public CollisionsManager playerScript;
     public BarrierCall callScript;
 
+    public Animator anim;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -38,6 +40,7 @@ public class SuicideAI : MonoBehaviour
     public void OnCall()
     {
         agent.destination = obstacle.transform.position;
+        //anim.SetBool("run", true);
     }
 
     IEnumerator Destroy()
