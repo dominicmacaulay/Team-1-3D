@@ -3,7 +3,12 @@ guid: ce005622318a1054e81a5483d424df86
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BatteryPedistalMaterial
+    second: {fileID: 2100000, guid: cefdfae21d7ccbc47b97c56c73cd5e75, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

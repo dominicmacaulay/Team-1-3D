@@ -3,7 +3,27 @@ guid: 699f6913bc54ea345ba93a73bda0d849
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeakerBracketMaterial
+    second: {fileID: 2100000, guid: 805a7bb3a72282e4bb112e14ee5b91fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeakerCordsMaterial
+    second: {fileID: 2100000, guid: 4340e27a1dac31c499bb566d3b7254f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeakerInsidesMaterial
+    second: {fileID: 2100000, guid: 6b152f4656cd5a7498cfb096659ee0a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpeakerMaterial
+    second: {fileID: 2100000, guid: b8e914de5c6d14a4aa25af29e860f1df, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

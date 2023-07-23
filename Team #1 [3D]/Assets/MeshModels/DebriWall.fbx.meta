@@ -3,7 +3,17 @@ guid: b9ac1b734aede1e4c8ffa7ab70a30097
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DebrisMaterial
+    second: {fileID: 2100000, guid: 81f91c3593a8edf4a9785d3aeb30af76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PipeMaterial
+    second: {fileID: 2100000, guid: 0ebd5a5da660d6c4892ecc16b5d2bb8c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
