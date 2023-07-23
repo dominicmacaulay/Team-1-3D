@@ -3,7 +3,17 @@ guid: 600c5deebd061364699676514017e535
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorLights
+    second: {fileID: 2100000, guid: 98c8050ff7df12746bbdd9f48b68a7f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TopDoorMaterial
+    second: {fileID: 2100000, guid: 9612c16a845f482438575c60e08836aa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

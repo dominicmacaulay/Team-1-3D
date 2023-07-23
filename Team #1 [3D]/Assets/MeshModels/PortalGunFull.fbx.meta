@@ -3,7 +3,52 @@ guid: e586fd53926907b45b257ec81b47dc95
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BatteryChargeMaterial
+    second: {fileID: 2100000, guid: 85440872d3a504041bf54b306af4f6b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BatteryPackDetails
+    second: {fileID: 2100000, guid: bd0b14d131c3814499ac007177f7ddbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BatteryPackMaterial
+    second: {fileID: 2100000, guid: 6a783e61d53c53741bd927a0f5e7cd97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalGunBaseMaterial
+    second: {fileID: 2100000, guid: 9d146f3de12c75f4bbf2ec2b0116b8a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalGunDetails
+    second: {fileID: 2100000, guid: 6a783e61d53c53741bd927a0f5e7cd97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalLiquidGlassMaterial
+    second: {fileID: 2100000, guid: bd224a9fb00184f44a90595206ecb147, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalLiquidMaterial
+    second: {fileID: 2100000, guid: b1461ded4fec62d4e9824e6e6e90c8bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalgunDiscMaterial
+    second: {fileID: 2100000, guid: 60047db95678adb418601ffcc0f9b394, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 6a783e61d53c53741bd927a0f5e7cd97, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,22 @@ guid: c7e57670d88fb9c4187874d3a40a5e8c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EmitterClipsMaterial
+    second: {fileID: 2100000, guid: 824f70e75ef903d4890a8cca21795462, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalEmitterDetails
+    second: {fileID: 2100000, guid: 6e8a1fdd8570e854a9da2b89a0fc054b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalEmitterMaterial
+    second: {fileID: 2100000, guid: ec2bc9b3d2d30cf4289288cb1a50a5e1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

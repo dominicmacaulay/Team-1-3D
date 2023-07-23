@@ -3,7 +3,17 @@ guid: 4762e0f7f57f0154d92b4f013c67a402
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PedestalMaterial
+    second: {fileID: 2100000, guid: 695de78b809cd7644b74b71dddff59d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PedestalScreenMaterial
+    second: {fileID: 2100000, guid: 8eac27b8e34b71a45a88fd6eeab3bbdb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
