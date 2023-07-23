@@ -131,7 +131,9 @@ public class CollisionsManager : MonoBehaviour
     {
         HUD.SetActive(false);
         characterController.PausePlayerForTransition();
-        turretScript.inRange = false;
+        if (turretScript != null) {
+            turretScript.inRange = false;
+        }
         acidAlpha = 0;
         bulletAlpha = 0;
         yield return new WaitForSeconds(deathAnimation);
