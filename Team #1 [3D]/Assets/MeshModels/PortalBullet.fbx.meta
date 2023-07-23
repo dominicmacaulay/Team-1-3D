@@ -3,7 +3,12 @@ guid: 8134cdeeb12fb944f942edc519a23d1f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PortalProjectileMaterial
+    second: {fileID: 2100000, guid: 71841ba6b695ba64f83b40883982c2db, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

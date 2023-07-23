@@ -3,7 +3,27 @@ guid: f4ae1a8ef6ce05749a962b97ad759a8b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LockerDoorMaterial
+    second: {fileID: 2100000, guid: 5b2b951bd93ea3d47805ed5a32564f0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LockerHandleMaterial
+    second: {fileID: 2100000, guid: 52e827c02494def45819ae806d7b21b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LockerKeyPadMaterial
+    second: {fileID: 2100000, guid: 0ef8caec8b1457340a01a948f317759f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LockerMaterial
+    second: {fileID: 2100000, guid: 1d8238c5d77d3ea46bfecf719de3198c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
