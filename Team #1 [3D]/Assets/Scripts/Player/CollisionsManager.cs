@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class CollisionsManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class CollisionsManager : MonoBehaviour
     bool isTouchingAcid = false;
     bool isBeingShot = false;
 
+    // Use the PlayableDirector to start and stop cutscenes
+    PlayableDirector timeline;
+
     public RawImage acidPanel;
     public RawImage bulletPanel;
     public GameOverPanel panelScript;
@@ -24,6 +28,15 @@ public class CollisionsManager : MonoBehaviour
 
     float acidAlpha = 0;
     float bulletAlpha = 0;
+
+
+    void Start() {
+        GameObject camera = GameObject.Find("Camera");
+        timeline = camera.GetComponent<PlayableDirector>();
+        if (timeline != null) {
+            Debug.Log("Timeline attached");
+        }
+    }
 
     void Update()
     {
@@ -54,6 +67,9 @@ public class CollisionsManager : MonoBehaviour
             StartCoroutine(BulletEffect());
             StartCoroutine(DeathCheck(bulletPanel));
             panelScript.causeOfDeath = "a malfunction with the security turret's targeting system";
+        }
+        if (other.gameObject.tag == "cutscene") {
+            timeline.Play();
         }
     }
 
