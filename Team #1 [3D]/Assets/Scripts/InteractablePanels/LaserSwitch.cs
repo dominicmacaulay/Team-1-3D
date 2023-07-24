@@ -10,9 +10,12 @@ public class LaserSwitch : MonoBehaviour
 
     Animator anim;
 
+    AudioSource audio;
+    public AudioClip switchSFX;
+
     private void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     public void FlipSwitch()
@@ -21,6 +24,8 @@ public class LaserSwitch : MonoBehaviour
         {
             if (laserGrid.isDisabled == false)
             {
+                audio.PlayOneShot(switchSFX, 1f);
+
                 anim = GetComponent<Animator>();
                 laserGrid.DisableGrid();
                 Debug.Log("laser disabled");
