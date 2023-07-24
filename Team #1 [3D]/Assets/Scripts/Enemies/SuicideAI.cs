@@ -17,6 +17,10 @@ public class SuicideAI : MonoBehaviour
 
     public Animator anim;
 
+    AudioSource audio;
+    public AudioClip idleTalk;
+    public AudioClip chaseTalk;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -24,6 +28,10 @@ public class SuicideAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         isAble = true;
+
+        audio.Stop();
+        audio.clip = idleTalk;
+        audio.Play();
     }
 
     // Update is called once per frame
@@ -33,7 +41,10 @@ public class SuicideAI : MonoBehaviour
         player = Physics.CheckSphere(transform.position, 5, whatIsPlayer);
         if (proximity && isAble)
         {
-            StartCoroutine(Destroy());            
+            StartCoroutine(Destroy());
+            audio.Stop();
+            audio.clip = chaseTalk;
+            audio.Play();
         }
         
     }
