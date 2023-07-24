@@ -43,6 +43,7 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        audio = GetComponent<AudioSource>();
 
         InitialPath();
     }
