@@ -38,7 +38,7 @@ public class LabInitiationPanel : MonoBehaviour
 
     void Update()
     {
-        lightsButton.color = new Color(lightsButton.color.r, lightsButton.color.g, lightsButton.color.b, lightsAlpha);
+        // lightsButton.color = new Color(lightsButton.color.r, lightsButton.color.g, lightsButton.color.b, lightsAlpha);
     }
     public void OnClickCloseButton()
     {
