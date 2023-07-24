@@ -28,6 +28,10 @@ public class TurretPanel : MonoBehaviour
     public GameObject HUD;
     public GameObject promptTrigger;
 
+    AudioSource audio;
+    public AudioClip interactSFX;
+    public AudioClip deactivateSFX;
+
     bool triggerStay = true;
 
     public SUPERCharacterAIO characterController;
@@ -35,6 +39,7 @@ public class TurretPanel : MonoBehaviour
     void Start()
     {
         UpdateButtonColor();
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -51,6 +56,7 @@ public class TurretPanel : MonoBehaviour
             index -= 1;
         }
         UpdateButtonColor();
+        InteractNoise();
     }
 
     public void OnClickRightNameButton()
@@ -60,6 +66,7 @@ public class TurretPanel : MonoBehaviour
             index += 1;
         }
         UpdateButtonColor();
+        InteractNoise();
     }
 
     public void OnClickDialButton()
@@ -70,12 +77,14 @@ public class TurretPanel : MonoBehaviour
             lockNumber = -18;
         }
         UpdateButtonColor();
+        InteractNoise();
     }
 
     public void SliderValue(Slider slider)
     {
         powerLevel = (int)slider.value;
         UpdateButtonColor();
+        InteractNoise();
     }
 
     public void OnClickDeactivateButton()
@@ -84,6 +93,7 @@ public class TurretPanel : MonoBehaviour
         {
             turret.GetComponent<GunTurret>().DeactivateTurret();
             triggerStay = false;
+            audio.PlayOneShot(deactivateSFX, 1f);
         }
     }
 
@@ -96,6 +106,7 @@ public class TurretPanel : MonoBehaviour
         {
             promptTrigger.SetActive(true);
         }
+        InteractNoise();
     }
 
     void UpdateButtonColor()
@@ -109,5 +120,9 @@ public class TurretPanel : MonoBehaviour
         {
             GetComponent<ButtonColorChange>().ChangeButtonColor(Color.red);
         }
+    }
+
+    void InteractNoise() {
+        audio.PlayOneShot(interactSFX, 1f);
     }
 }
