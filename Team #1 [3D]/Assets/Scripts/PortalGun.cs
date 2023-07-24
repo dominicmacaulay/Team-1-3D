@@ -37,6 +37,10 @@ public class PortalGun : MonoBehaviour
     public Camera fpsCam;
     public Transform attackPoint;
 
+    // Audio
+    AudioSource audio;
+    public AudioClip shotSFX;
+
     //Graphics
     public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
@@ -46,6 +50,8 @@ public class PortalGun : MonoBehaviour
 
     private void Awake()
     {
+        audio = GetComponent<AudioSource>();
+
         //make sure magazine is full
         bulletsLeft = magazineSize;
         readyToShoot = true;
@@ -107,6 +113,10 @@ public class PortalGun : MonoBehaviour
 
         //Instantiate bullet/projectile
         GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity); //store instantiated bullet in currentBullet
+
+        // Play Audio
+        audio.PlayOneShot(shotSFX, .3f);
+
         //Rotate bullet to shoot direction
         currentBullet.transform.forward = directionWithSpread.normalized;
 

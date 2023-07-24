@@ -8,6 +8,13 @@ public class PortalCollisions : MonoBehaviour
     public Vector3 portalJump;
     public GameObject portalSFX;
 
+    AudioSource audio;
+    public AudioClip teleportSFX;
+
+    void Start() {
+        audio = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "portal")
@@ -21,6 +28,7 @@ public class PortalCollisions : MonoBehaviour
     {
         player.transform.position = portalJump;
         Instantiate(portalSFX, player.transform.position, Quaternion.identity);
+        audio.PlayOneShot(teleportSFX, 1f);
         yield return null;
     }
 }

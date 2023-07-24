@@ -12,6 +12,9 @@ public class GunBuild : MonoBehaviour
     public GameObject triggerPanel;
     public TMP_Text message;
 
+    AudioSource audio;
+    public AudioClip buildGunSFX;
+
     bool hasPower;
     bool hasTeleport;
 
@@ -20,6 +23,8 @@ public class GunBuild : MonoBehaviour
     {
         portalGun.SetActive(false);
         DeactivateMessage();
+
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +38,8 @@ public class GunBuild : MonoBehaviour
     {
         if (hasPower && hasTeleport)
         {
+            audio.PlayOneShot(buildGunSFX, 1f);
+
             portalGun.SetActive(true);
             pickupScript.PlaceEnergySource();
             pickupScript.PlacePortalComponent();

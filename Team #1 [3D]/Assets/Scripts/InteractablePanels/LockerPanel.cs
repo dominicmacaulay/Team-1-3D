@@ -12,6 +12,10 @@ public class LockerPanel : MonoBehaviour
     public TMP_Text num3Text;
     public TMP_Text num4Text;
 
+    AudioSource audio;
+    public AudioClip interactSFX;
+    public AudioClip unlockSFX;
+
     int num1 = 0;
     int num2 = 0;
     int num3 = 0;
@@ -28,6 +32,8 @@ public class LockerPanel : MonoBehaviour
     private void Start()
     {
         pickupTrigger.SetActive(false);
+
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,6 +55,8 @@ public class LockerPanel : MonoBehaviour
         {
             num1 = 0;
         }
+
+        audio.PlayOneShot(interactSFX, 1f);
     }
     public void UpButtonTwo()
     {
@@ -60,6 +68,7 @@ public class LockerPanel : MonoBehaviour
         {
             num2 = 0;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
     public void UpButtonThree()
     {
@@ -71,6 +80,7 @@ public class LockerPanel : MonoBehaviour
         {
             num3 = 0;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
     public void UpButtonFour()
     {
@@ -82,6 +92,7 @@ public class LockerPanel : MonoBehaviour
         {
             num4 = 0;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
 
     public void DownButtonOne()
@@ -94,6 +105,7 @@ public class LockerPanel : MonoBehaviour
         {
             num1 = 9;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
     public void DownButtonTwo()
     {
@@ -105,6 +117,7 @@ public class LockerPanel : MonoBehaviour
         {
             num2 = 9;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
     public void DownButtonThree()
     {
@@ -116,6 +129,7 @@ public class LockerPanel : MonoBehaviour
         {
             num3 = 9;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
     public void DownButtonFour()
     {
@@ -127,6 +141,7 @@ public class LockerPanel : MonoBehaviour
         {
             num4 = 9;
         }
+        audio.PlayOneShot(interactSFX, 1f);
     }
 
     public void OnClickEnter()
@@ -134,6 +149,7 @@ public class LockerPanel : MonoBehaviour
         if (num1 == 3 && num2 == 8 && num3 == 2 && num4 == 5)
         {           
             triggerStay = false;
+            audio.PlayOneShot(unlockSFX, 1f);
             // unlock animation
         }
         else
