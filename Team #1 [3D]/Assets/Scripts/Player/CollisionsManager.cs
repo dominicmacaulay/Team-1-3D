@@ -41,6 +41,8 @@ public class CollisionsManager : MonoBehaviour
         if (timeline != null) {
             Debug.Log("Timeline attached");
         }
+
+        GameManager.instance.PlayMusic();
     }
 
     void Update()
