@@ -25,6 +25,7 @@ public class SuicideAI : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        audio = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
 
         isAble = true;
