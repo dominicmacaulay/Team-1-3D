@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     public int appleCount = 0;
 
+    public AudioSource audio;
+    public AudioClip menuSFX;
+    public AudioClip gameSFX;
+
     private void Awake()
     {
         if (instance == null)

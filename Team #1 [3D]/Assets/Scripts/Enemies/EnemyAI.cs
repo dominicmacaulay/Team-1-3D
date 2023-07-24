@@ -41,11 +41,12 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        
         agent = GetComponent<NavMeshAgent>();
         audio = GetComponent<AudioSource>();
 
         InitialPath();
+        player = GameObject.Find("Player").transform;
     }
 
     public void InitialPath() {
@@ -75,16 +76,17 @@ public class EnemyAI : MonoBehaviour
         anim.SetBool("walk", true);
         SearchWalkPoint();
         agent.speed = 3f;
-        
+
         if (!playerSeen) agent.destination = currentWalkPoint;
 
         // Player in sight
         if (playerInSightRange)
+        {
             audio.Stop();
             audio.clip = chaseTalk;
             audio.Play();
-
             playerSeen = true;
+        }
     }
 
     private void SearchWalkPoint()
