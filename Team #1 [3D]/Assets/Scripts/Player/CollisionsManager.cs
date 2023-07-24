@@ -161,5 +161,6 @@ public class CollisionsManager : MonoBehaviour
         isAlive = false;
         panelScript.causeOfDeath = "a physical altercation with escaped test subjects";
         StartCoroutine(Death());
+        Debug.Log("fuck");
     }
 }
