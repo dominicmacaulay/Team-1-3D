@@ -5,15 +5,19 @@ using UnityEngine;
 public class LabEntranceDoor : MonoBehaviour
 {
     public Animator anim;
-    public AudioSource audio;
+    AudioSource audio;
     public AudioClip openSFX;
 
     public LabInitiationPanel panelScript;
 
+    void Start() {
+        audio = GetComponent<AudioSource>();
+    }
+
     public void OpenDoor()
     {
         anim.SetTrigger("Open");
-        //audio.PlayOneShot(openSFX);
+        audio.PlayOneShot(openSFX);
         Debug.Log("open door");
     }
 
