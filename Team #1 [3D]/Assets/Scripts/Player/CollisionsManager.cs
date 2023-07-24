@@ -29,9 +29,14 @@ public class CollisionsManager : MonoBehaviour
     float acidAlpha = 0;
     float bulletAlpha = 0;
 
+    AudioSource audio;
+    public AudioClip deathSFX;
 
     void Start() {
         GameObject camera = GameObject.Find("Camera");
+
+        audio = GetComponent<AudioSource>();
+
         timeline = camera.GetComponent<PlayableDirector>();
         if (timeline != null) {
             Debug.Log("Timeline attached");
@@ -145,6 +150,10 @@ public class CollisionsManager : MonoBehaviour
 
     IEnumerator Death()
     {
+        if (deathSFX != null) {
+            audio.PlayOneShot(deathSFX, 1f);
+        }
+
         HUD.SetActive(false);
         characterController.PausePlayerForTransition();
         if (turretScript != null) {
