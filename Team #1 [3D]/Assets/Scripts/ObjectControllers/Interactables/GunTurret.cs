@@ -10,8 +10,14 @@ public class GunTurret : MonoBehaviour
     public Collider turretPath;
     public Animator anim;
 
+    AudioSource audio;
+
     bool isActive = true;
     public bool inRange = false;
+
+    void Start() {
+        audio = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -25,6 +31,7 @@ public class GunTurret : MonoBehaviour
             //anim.SetBool("isShooting", true);
             inRange = true;
             StartCoroutine(SpawnSFX());
+            StartCoroutine(SpawnGunNoise());
         }
     }
 
@@ -35,6 +42,8 @@ public class GunTurret : MonoBehaviour
             //anim.SetBool("isShooting", false);
             inRange = false;
             StopCoroutine(SpawnSFX());
+            StopCoroutine(SpawnGunNoise());
+            audio.Stop();
         }
     }
 
@@ -49,6 +58,13 @@ public class GunTurret : MonoBehaviour
     void Animation()
     {
         anim.SetTrigger("Inactive");
+    }
+
+    public IEnumerator SpawnGunNoise() {
+        while (inRange) {
+            audio.Play();
+            yield return new WaitForSeconds(9f);
+        }
     }
 
     public IEnumerator SpawnSFX()
