@@ -16,11 +16,16 @@ public class LabInitiationPanel : MonoBehaviour
     float lightsAlpha;
     bool doorOpen;
 
+    AudioSource audio;
+    public AudioClip interactSFX;
+
     public LabEntranceDoor doorScript;
     public SUPERCharacterAIO characterController;
 
     void Start()
     {
+        audio = GetComponent<AudioSource>();
+
         pendingMessage.SetActive(false);
         if (SceneManager.GetActiveScene().name == "Level 1")
         {
@@ -45,6 +50,7 @@ public class LabInitiationPanel : MonoBehaviour
         if (doorOpen)
         {
             doorOpen = false;
+            audio.PlayOneShot(interactSFX, 1f);
             doorScript.CloseDoor();
             pendingMessage.SetActive(true);
         }
@@ -61,6 +67,7 @@ public class LabInitiationPanel : MonoBehaviour
     public void OnClickExitButton()
     {
         gameObject.SetActive(false);
+        audio.PlayOneShot(interactSFX, 1f);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
     }

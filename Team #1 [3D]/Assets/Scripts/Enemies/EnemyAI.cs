@@ -24,6 +24,10 @@ public class EnemyAI : MonoBehaviour
     bool playerSeen = false;
     public float walkPointRange;
 
+    // AudioSource audio;
+    // public AudioClip idleTalk;
+    // public AudioClip chaseTalk;
+
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
@@ -44,6 +48,10 @@ public class EnemyAI : MonoBehaviour
     }
 
     public void InitialPath() {
+        // audio.Stop();
+        // audio.clip = idleTalk;
+        // audio.Play();
+
         currentWalkPoint = walkPointOne;
         agent.Warp(walkPointTwo);
         playerSeen = false;
@@ -71,6 +79,10 @@ public class EnemyAI : MonoBehaviour
 
         // Player in sight
         if (playerInSightRange)
+            // audio.Stop();
+            // audio.clip = chaseTalk;
+            // audio.Play();
+
             playerSeen = true;
     }
 
