@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Modeler
+  m_text: Lead Artist, Model Artist, Texture Artist, Story Writer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
   m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Programmer
+  m_text: Lead Programmer, Sound Artist, Music Artist, Story Writer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
   m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Model Texurer
+  m_text: 'Texture Artist, UI Artist, Lighting Artist, '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
   m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Programmer
+  m_text: Programmer, Story Writer, Animation Programmer, UI Programmer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e1db095642af94e40b9f5ce62240adc3, type: 2}
   m_sharedMaterial: {fileID: -160201996543555249, guid: e1db095642af94e40b9f5ce62240adc3,
