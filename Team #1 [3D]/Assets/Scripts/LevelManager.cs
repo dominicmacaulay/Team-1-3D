@@ -9,11 +9,6 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Credits")
-        {
-            StartCoroutine(CreditsTransition());
-        }
-
         if (SceneManager.GetActiveScene().name == "Win")
         {
             StartCoroutine(WinTransition());
@@ -45,15 +40,10 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    IEnumerator CreditsTransition()
-    {
-        yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("Main Menu");
-    }
-
     IEnumerator WinTransition()
     {
+        transitionTime = 10f;
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Main Menu");
     }
 }
