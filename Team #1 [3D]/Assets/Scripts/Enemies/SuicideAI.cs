@@ -7,11 +7,11 @@ public class SuicideAI : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject obstacle;
-    bool proximity, player;
+    bool proximity, player, isAble;
     public LayerMask whatIsObstacle;
     public LayerMask whatIsPlayer;
     public GameObject explosionSFX;
-    public Transform explosionPoint, respawnPoint;
+    public Transform explosionPoint, respawnPoint, batteryPoint;
     public CollisionsManager playerScript;
     public BarrierCall callScript;
 
@@ -22,6 +22,7 @@ public class SuicideAI : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        isAble = true;
     }
 
     // Update is called once per frame
@@ -29,10 +30,9 @@ public class SuicideAI : MonoBehaviour
     {
         proximity = Physics.CheckSphere(transform.position, .5f, whatIsObstacle);
         player = Physics.CheckSphere(transform.position, 5, whatIsPlayer);
-        if (proximity)
+        if (proximity && isAble)
         {
-            StartCoroutine(Destroy());
-            
+            StartCoroutine(Destroy());            
         }
         
     }
@@ -40,25 +40,29 @@ public class SuicideAI : MonoBehaviour
     public void OnCall()
     {
         agent.destination = obstacle.transform.position;
-        //anim.SetBool("run", true);
+        anim.SetBool("run", true);
     }
 
     IEnumerator Destroy()
     {
+        isAble = false;
         Instantiate(explosionSFX, explosionPoint.position, Quaternion.identity);
         yield return new WaitForSeconds(.1f);
         obstacle.SetActive(false);
         if (player)
         {
-            agent.destination = respawnPoint.position;
-            playerScript.InstantDeath();
-            yield return new WaitForSeconds(1.5f);            
+            agent.Warp(respawnPoint.position);
+            transform.LookAt(batteryPoint.position);
+            playerScript.InstantDeath();            
             gameObject.SetActive(true);
             obstacle.SetActive(true);
             callScript.exist = true;
+            anim.SetBool("run", false);
+            isAble = true;
         }
         else
         {
+            Debug.Log("bruv");
             gameObject.SetActive(false);
         }
     }
