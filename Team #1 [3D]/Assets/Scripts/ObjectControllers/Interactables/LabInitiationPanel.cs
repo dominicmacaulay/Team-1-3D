@@ -67,7 +67,6 @@ public class LabInitiationPanel : MonoBehaviour
     public void OnClickExitButton()
     {
         gameObject.SetActive(false);
-        audio.PlayOneShot(interactSFX, 1f);
         characterController.UnpausePlayer();
         HUD.SetActive(true);
     }
