@@ -22,6 +22,7 @@ public class SuicideAI : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+
         isAble = true;
     }
 
@@ -47,6 +48,7 @@ public class SuicideAI : MonoBehaviour
     {
         isAble = false;
         Instantiate(explosionSFX, explosionPoint.position, Quaternion.identity);
+
         yield return new WaitForSeconds(.1f);
         obstacle.SetActive(false);
         if (player)
